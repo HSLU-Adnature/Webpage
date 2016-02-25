@@ -1,25 +1,26 @@
 <?xml version="1.0" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.marcpouly.ch/countries"
-           targetNamespace="http://www.marcpouly.ch/countries"
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.adnature.ch/core"
+           targetNamespace="http://www.adnature.ch/core"
            elementFormDefault="qualified">
-    <xs:element name="european_countries">
+    <xs:element name="adnature_events">
         <xs:complexType>
             <xs:sequence minOccurs="1" maxOccurs="unbounded">
-                <xs:element ref="country"/>
+                <xs:element ref="event"/>
             </xs:sequence>
             <xs:attribute name="year" type="xs:gYear" use="required"/>
         </xs:complexType>
     </xs:element>
-    <xs:element name="country">
+    <xs:element name="event">
         <xs:complexType>
-            <xs:all>
-                <xs:element name="name" type="xs:string"/>
-                <xs:element name="population" type="xs:positiveInteger"/>
-                <xs:element name="population_under_15" type="percentType"/>
+            <xs:sequence minOccurs="0">
+                <xs:element name="title" type="xs:string"/>
+                <xs:element name="date" type="xs:gMonthDay"/>
+                <xs:element name="time" type="xs:time"/>
                 <xs:element name="population_over_64" type="percentType" />
                 <xs:element name="life_exp_men" type="xs:decimal"/>
                 <xs:element name="life_exp_women" type="xs:decimal"/>
-            </xs:all>
+            </xs:sequence>
+            <xs:attribute name="year" type="xs:gYear" use="required"/>
         </xs:complexType>
     </xs:element>
     <xs:simpleType name="percentType">
