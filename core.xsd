@@ -1,0 +1,30 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="charity">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="donator" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="donator">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:elment name="desc" type="spender" minOccur="1" maxOccur="1" />
+                <xs:element ref="donation" minOccur="1" maxOccur="unbound" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="donation">
+        <xs:extension base="xs:string">
+            <xs:attribute name="year" type="xs:gYear" use="required" />
+            <xs:attribute name="amount" type="xs:decimal" use="required" />
+        </xs:extension>
+    </xs:element>
+    <xs:simpleType name="spender">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Privatperson" />
+            <xs:enumeration value="Gruppe" />
+            <xs:enumeration value="Firma" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
