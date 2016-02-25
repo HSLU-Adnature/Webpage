@@ -1,30 +1,31 @@
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="charity">
+<?xml version="1.0" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.marcpouly.ch/countries"
+           targetNamespace="http://www.marcpouly.ch/countries"
+           elementFormDefault="qualified">
+    <xs:element name="european_countries">
         <xs:complexType>
-            <xs:sequence>
-                <xs:element ref="donator" maxOccurs="unbounded" />
+            <xs:sequence minOccurs="1" maxOccurs="unbounded">
+                <xs:element ref="country"/>
             </xs:sequence>
+            <xs:attribute name="year" type="xs:gYear" use="required"/>
         </xs:complexType>
     </xs:element>
-    <xs:element name="donator">
+    <xs:element name="country">
         <xs:complexType>
-            <xs:sequence>
-                <xs:elment name="desc" type="spender" minOccur="1" maxOccur="1" />
-                <xs:element ref="donation" minOccur="1" maxOccur="unbound" />
-            </xs:sequence>
+            <xs:all>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="population" type="xs:positiveInteger"/>
+                <xs:element name="population_under_15" type="percentType"/>
+                <xs:element name="population_over_64" type="percentType" />
+                <xs:element name="life_exp_men" type="xs:decimal"/>
+                <xs:element name="life_exp_women" type="xs:decimal"/>
+            </xs:all>
         </xs:complexType>
     </xs:element>
-    <xs:element name="donation">
-        <xs:extension base="xs:string">
-            <xs:attribute name="year" type="xs:gYear" use="required" />
-            <xs:attribute name="amount" type="xs:decimal" use="required" />
-        </xs:extension>
-    </xs:element>
-    <xs:simpleType name="spender">
-        <xs:restriction base="xs:string">
-            <xs:enumeration value="Privatperson" />
-            <xs:enumeration value="Gruppe" />
-            <xs:enumeration value="Firma" />
+    <xs:simpleType name="percentType">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="100"/>
         </xs:restriction>
     </xs:simpleType>
 </xs:schema>
