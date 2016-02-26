@@ -1,11 +1,13 @@
 <?xml version="1.0" ?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ad="http://www.adnature.ch/core">
     <xsl:template match="/">
         <html lang="en">
             <head>
                 <meta charset="UTF-8"/>
                 <title>Adnature</title>
                 <link rel="stylesheet" href="../css/bootstrap-yeti.min.css"/>
+                <link rel="shortcut icon" href="../pics/favicon.ico" type="image/x-icon"/>
+                <link rel="icon" href="../pics/favicon.ico" type="image/x-icon"/>
             </head>
             <body>
                 <div class="navbar navbar-default navbar-static-top">
@@ -21,7 +23,8 @@
                 </div>
                 <div class="container">
                     <div class="page-header">
-                        <h1>Events</h1>
+                        <h1 style="float:left">Events</h1>
+                        <a href="new.html"><img style="width:50px; padding-top:20px" src="../pics/new.png"/></a>
                     </div>
                 </div>
                 <div class="container">
@@ -32,18 +35,18 @@
             </body>
         </html>
     </xsl:template>
-    <xsl:template match="event">
+    <xsl:template match="ad:event">
         <div class="container">
             <div class="jumbotron">
                 <div class="row">
                     <div class="col-md-6 col-xs-6 col-lg-6 col-sm-6">
-                        <h2><xsl:value-of select="title"/></h2>
-                        <p><xsl:value-of select="short_description"/></p>
+                        <h2><xsl:value-of select="ad:title"/></h2>
+                        <p><xsl:value-of select="ad:short_description"/></p>
                     </div>
                     <div class="col-md-6 col-xs-6 col-lg-6 col-sm-6">
                         <img class="img-rounded">
                             <xsl:attribute name="src">
-                                <xsl:value-of select="picture"/>
+                                <xsl:value-of select="ad:picture"/>
                             </xsl:attribute>
                         </img>
                     </div>
