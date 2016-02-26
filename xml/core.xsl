@@ -1,7 +1,5 @@
 <?xml version="1.0" ?>
-
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    <xsl:output method="xml" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" indent="yes"/>
     <xsl:template match="/">
         <html lang="en">
             <head>
@@ -43,8 +41,10 @@
                         <p><xsl:value-of select="short_description"/></p>
                     </div>
                     <div class="col-md-6 col-xs-6 col-lg-6 col-sm-6">
-                        <img class="img-rounded" width="300" height="200">
-                            <xsl:attribute name="src"><xsl:value-of select="picture"/></xsl:attribute>
+                        <img class="img-rounded">
+                            <xsl:attribute name="src">
+                                <xsl:value-of select="picture"/>
+                            </xsl:attribute>
                         </img>
                     </div>
                 </div>
