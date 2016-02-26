@@ -1,31 +1,109 @@
 <!DOCTYPE html>
 <html>
-<body>
+    <head>
+        <link rel="stylesheet" href="../css/bootstrap-yeti.min.css"/>
+    </head>
+    <body>
+    <div class="col-lg-6">
+        <div class="well bs-component">
+            <form class="form-horizontal">
+                <fieldset>
+                    <legend>Legend</legend>
+                    <div class="form-group">
+                        <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="inputEmail" placeholder="Email" vk_1a2f1="subscribed">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                        <div class="col-lg-10">
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password" vk_1a2f1="subscribed">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Checkbox
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="textArea" class="col-lg-2 control-label">Textarea</label>
+                        <div class="col-lg-10">
+                            <textarea class="form-control" rows="3" id="textArea"></textarea>
+                            <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Radios</label>
+                        <div class="col-lg-10">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                                    Option one is this
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                    Option two can be something else
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="select" class="col-lg-2 control-label">Selects</label>
+                        <div class="col-lg-10">
+                            <select class="form-control" id="select">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            <br>
+                            <select multiple="" class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-2">
+                            <button type="reset" class="btn btn-default">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div></div>
+    </div>
+    <form action="../PHP/newEntry.php" id="neweventform">
+        <div> Titel: <input type="text" name="title"/></div>
+        <div> Datum: <input type="date" name="date"/></div>
+        <div> Startzeit: <input type="time" name="start-time"/></div>
+        <div> Endzeit: <input type="time" name="end-time"/></div>
+        <div> Adresse: <input type="text" name="address"/></div>
+        <div> PLZ: <input type="text" name="zip"/></div>
+        <div> Ort: <input type="text" name="city"/></div>
+        <div> Kurzbeschreibung: <input type="text" name="short-description"/></div>
+        <div>Beschreibung: <textarea form="newEventForm" name="description">Enter text here...</textarea></div>
+        <div>Location: <input type="text" name="location"></div>
+        <div>Vorname: <input type="text" name="surname"></div>
+        <div>Nachname: <input type="text" name="firstname"></div>
+        <div>Email: <input type="email" name="email"></div>
+        <div>Telefonummer: <input type="tel" name="phone"></div>
+        <div>Homepage: <input type="url" name="webpage"></div>
+        <div>Type: <select name="type">
+            <option>Wanderung</option>
+            <option>Abenteuer</option>
+            <option>Essen</option>
+        </select></div>
+        <div><input type="file" name="picture"></div>
+        <input type="submit"/>
+    </form>
 
-<form action="../PHP/newEntry.php" id="neweventform">
-    <div> Titel: <input type="text" name="title"/></div>
-    <div> Datum: <input type="date" name="date"/></div>
-    <div> Startzeit: <input type="time" name="start-time"/></div>
-    <div> Endzeit: <input type="time" name="end-time"/></div>
-    <div> Adresse: <input type="text" name="address"/></div>
-    <div> PLZ: <input type="text" name="zip"/></div>
-    <div> Ort: <input type="text" name="city"/></div>
-    <div> Kurzbeschreibung: <input type="text" name="short-description"/></div>
-    <div>Beschreibung: <textarea form="newEventForm" name="description">Enter text here...</textarea></div>
-    <div>Location: <input type="text" name="location"></div>
-    <div>Vorname: <input type="text" name="surname"></div>
-    <div>Nachname: <input type="text" name="firstname"></div>
-    <div>Email: <input type="email" name="email"></div>
-    <div>Telefonummer: <input type="tel" name="phone"></div>
-    <div>Homepage: <input type="url" name="webpage"></div>
-    <div>Type: <select name="type">
-        <option>Wanderung</option>
-        <option>Abenteuer</option>
-        <option>Essen</option>
-    </select></div>
-    <div><input type="file" name="picture"></div>
-    <input type="submit"/>
-</form>
-
-</body>
+    </body>
 </html>

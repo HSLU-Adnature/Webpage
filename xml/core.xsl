@@ -24,7 +24,7 @@
                 <div class="container">
                     <div class="page-header">
                         <h1 style="float:left">Events</h1>
-                        <a href="new.html"><img style="width:50px; padding-top:20px" src="../pics/new.png"/></a>
+                        <a href="../html/newEntry.html"><img style="width:50px; padding-top:20px" src="../pics/new.png"/></a>
                     </div>
                 </div>
                 <div class="container">
