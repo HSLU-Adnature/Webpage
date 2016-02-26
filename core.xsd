@@ -43,7 +43,7 @@
     </xs:element>
     <xs:simpleType name="telenr">
         <xs:restriction base="xs:string">
-            <xs:pattern value="/^(?:(?:\+|00)\d{2} +)?\d+ +\d+$/"/>
+            <xs:pattern value="[+][0-9]{11}"/>
         </xs:restriction>
     </xs:simpleType>
 </xs:schema>
