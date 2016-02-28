@@ -1,109 +1,163 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="../css/bootstrap-yeti.min.css"/>
-    </head>
-    <body>
-    <div class="col-lg-6">
-        <div class="well bs-component">
-            <form class="form-horizontal">
-                <fieldset>
-                    <legend>Legend</legend>
-                    <div class="form-group">
-                        <label for="inputEmail" class="col-lg-2 control-label">Email</label>
-                        <div class="col-lg-10">
-                            <input type="text" class="form-control" id="inputEmail" placeholder="Email" vk_1a2f1="subscribed">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPassword" class="col-lg-2 control-label">Password</label>
-                        <div class="col-lg-10">
-                            <input type="password" class="form-control" id="inputPassword" placeholder="Password" vk_1a2f1="subscribed">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox"> Checkbox
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="textArea" class="col-lg-2 control-label">Textarea</label>
-                        <div class="col-lg-10">
-                            <textarea class="form-control" rows="3" id="textArea"></textarea>
-                            <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-lg-2 control-label">Radios</label>
-                        <div class="col-lg-10">
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-                                    Option one is this
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                    Option two can be something else
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="select" class="col-lg-2 control-label">Selects</label>
-                        <div class="col-lg-10">
-                            <select class="form-control" id="select">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                            <br>
-                            <select multiple="" class="form-control">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-lg-10 col-lg-offset-2">
-                            <button type="reset" class="btn btn-default">Cancel</button>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
-                    </div>
-                </fieldset>
-            </form>
-            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div></div>
-    </div>
-    <form action="../PHP/newEntry.php" id="neweventform">
-        <div> Titel: <input type="text" name="title"/></div>
-        <div> Datum: <input type="date" name="date"/></div>
-        <div> Startzeit: <input type="time" name="start-time"/></div>
-        <div> Endzeit: <input type="time" name="end-time"/></div>
-        <div> Adresse: <input type="text" name="address"/></div>
-        <div> PLZ: <input type="text" name="zip"/></div>
-        <div> Ort: <input type="text" name="city"/></div>
-        <div> Kurzbeschreibung: <input type="text" name="short-description"/></div>
-        <div>Beschreibung: <textarea form="newEventForm" name="description">Enter text here...</textarea></div>
-        <div>Location: <input type="text" name="location"></div>
-        <div>Vorname: <input type="text" name="surname"></div>
-        <div>Nachname: <input type="text" name="firstname"></div>
-        <div>Email: <input type="email" name="email"></div>
-        <div>Telefonummer: <input type="tel" name="phone"></div>
-        <div>Homepage: <input type="url" name="webpage"></div>
-        <div>Type: <select name="type">
-            <option>Wanderung</option>
-            <option>Abenteuer</option>
-            <option>Essen</option>
-        </select></div>
-        <div><input type="file" name="picture"></div>
-        <input type="submit"/>
-    </form>
+<head>
+    <link rel="stylesheet" href="../css/bootstrap-yeti.min.css"/>
+</head>
+<body>
+<div class="col-lg-6">
+    <div class="well bs-component">
+        <form class="form-horizontal">
+            <fieldset>
+                <legend>Create Event</legend>
 
-    </body>
+                <div class="form-group">
+                    <label for="title" class="col-lg-2 control-label">Title</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="title" placeholder="Title" vk_1a2f1="subscribed"
+                               value="Test Title">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="date" class="col-lg-2 control-label">Datum</label>
+                    <div class="col-lg-10">
+                        <input type="date" class="form-control" id="date" placeholder="Datum" vk_1a2f1="subscribed"
+                               value="2017-01-01">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="start-time" class="col-lg-2 control-label">Start Zeit</label>
+                    <div class="col-lg-10">
+                        <input type="time" class="form-control" id="start-time" placeholder="Start Zeit"
+                               vk_1a2f1="subscribed" value="12:00">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="end-time" class="col-lg-2 control-label">End Zeit</label>
+                    <div class="col-lg-10">
+                        <input type="time" class="form-control" id="end-time" placeholder="End Zeit"
+                               vk_1a2f1="subscribed" value="20:00">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="address" class="col-lg-2 control-label">Adresse</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="address" placeholder="Adresse" vk_1a2f1="subscribed"
+                               value="Test Address">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="zip" class="col-lg-2 control-label">PLZ</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="zip" placeholder="PLZ" vk_1a2f1="subscribed"
+                               value="6000">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="city" class="col-lg-2 control-label">Ort</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="city" placeholder="Ort" vk_1a2f1="subscribed"
+                               value="Luzern">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="short-description" class="col-lg-2 control-label">Kurzbeschreibung</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="short-description" placeholder="Kurzbeschreibung"
+                               vk_1a2f1="subscribed" value="Nur ein Testevent">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="description" class="col-lg-2 control-label">Beschreibung</label>
+                    <div class="col-lg-10">
+                        <textarea class="form-control" rows="3" id="description">Ein langer Text der den Event beschreibt.</textarea>
+                        <!--<span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>-->
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="location" class="col-lg-2 control-label">Location</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="location" placeholder="Location"
+                               vk_1a2f1="subscribed" value="Bern">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="surname" class="col-lg-2 control-label">Vorname</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="surname" placeholder="Vorname" vk_1a2f1="subscribed"
+                               value="TestVorname">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="firstname" class="col-lg-2 control-label">Nachname</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="firstname" placeholder="Nachname"
+                               vk_1a2f1="subscribed" value="TestNachname">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="col-lg-2 control-label">Email</label>
+                    <div class="col-lg-10">
+                        <input type="email" class="form-control" id="email" placeholder="Email" vk_1a2f1="subscribed"
+                               value="asdf@asdf.ch">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone" class="col-lg-2 control-label">Telefonnummer</label>
+                    <div class="col-lg-10">
+                        <input type="tel" class="form-control" id="phone" placeholder="Telefonnummer"
+                               vk_1a2f1="subscribed" value="+1234567890">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="homepage" class="col-lg-2 control-label">Homepage</label>
+                    <div class="col-lg-10">
+                        <input type="url" class="form-control" id="homepage" placeholder="Homepage"
+                               vk_1a2f1="subscribed" value="http://www.google.ch">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="type" class="col-lg-2 control-label">Type</label>
+                    <div class="col-lg-10">
+                        <select class="form-control" id="type">
+                            <option>Wanderung</option>
+                            <option>Abenteuer</option>
+                            <option>Essen</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="picture" class="col-lg-2 control-label">Bild</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="picture" placeholder="Bild" vk_1a2f1="subscribed"
+                               value="../pics/logo.png">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <button type="reset" class="btn btn-default">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+</body>
 </html>
