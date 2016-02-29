@@ -4,7 +4,7 @@
         <html lang="en">
             <head>
                 <meta charset="UTF-8"/>
-                <title>Adnature</title>
+                <title>Little Adnature</title>
                 <link rel="stylesheet" href="../css/bootstrap-yeti.min.css"/>
                 <link rel="shortcut icon" href="../pics/favicon.ico" type="image/x-icon"/>
                 <link rel="icon" href="../pics/favicon.ico" type="image/x-icon"/>
