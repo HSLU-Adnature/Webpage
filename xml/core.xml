@@ -1,8 +1,6 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="core.xsl"?>
-<adnature_events xmlns="http://www.adnature.ch/core"
-                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                    xsi:schemaLocation="http://www.adnature.ch/core core.xsd" year="2016">
+<adnature_events xmlns="http://www.adnature.ch/core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.adnature.ch/core core.xsd" year="2016">
     <event>
         <title>Wandertour mit Raclette</title>
         <date>2016-06-03</date>
@@ -12,8 +10,8 @@
         <zip>6490</zip>
         <city>Andermatt</city>
         <location>Andermatt</location>
-        <short_description>Wandertour durch die schöne Natur mit anschliessendem Raclettessen</short_description>
-        <description>Wandertour hindurch durch das unberührte Wandertal der Urnerberge. Viele Aussichtsmöglichkeiten. Am Mittag wartet ein schmackhaftes Raclett auf Sie.</description>
+        <short_description>Wandertour durch die sch&#xF6;ne Natur mit anschliessendem Raclettessen</short_description>
+        <description>Wandertour hindurch durch das unber&#xFC;hrte Wandertal der Urnerberge. Viele Aussichtsm&#xF6;glichkeiten. Am Mittag wartet ein schmackhaftes Raclett auf Sie.</description>
         <owner>
             <surname>Hansi</surname>
             <lastname>Hinterseher</lastname>
@@ -34,8 +32,8 @@
         <zip>6490</zip>
         <city>Andermatt</city>
         <location>Andermatt</location>
-        <short_description>Feines Fondue für die ganze Familie!</short_description>
-        <description>Wandertour hindurch durch das unberührte Wandertal der Urnerberge. Viele Aussichtsmöglichkeiten. Am Mittag wartet ein schmackhaftes Raclett auf Sie.</description>
+        <short_description>Feines Fondue f&#xFC;r die ganze Familie!</short_description>
+        <description>Wandertour hindurch durch das unber&#xFC;hrte Wandertal der Urnerberge. Viele Aussichtsm&#xF6;glichkeiten. Am Mittag wartet ein schmackhaftes Raclett auf Sie.</description>
         <owner>
             <surname>Hansi</surname>
             <lastname>Hinterseher</lastname>
