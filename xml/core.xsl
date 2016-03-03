@@ -29,7 +29,9 @@
                 </div>
                 <div class="container">
                     <div class="row">
-                        <xsl:apply-templates/>
+                        <xsl:apply-templates select="ad:adnature_events/ad:event">
+                            <xsl:sort select="ad:date" />
+                        </xsl:apply-templates>
                     </div>
                 </div>
             </body>
