@@ -1,6 +1,6 @@
 <?php
-
-$xml = simplexml_load_file('../xml/core.xml');
+$filename = '../xml/core.xml';
+$xml = simplexml_load_file($filename);
 
 $xml->registerXPathNamespace("ad", 'http://www.adnature.ch/core');
 
@@ -28,7 +28,7 @@ $event->addChild("type", $_POST["type"]);
 $event->addChild("picture", $_POST["picture"]);
 $event->addChild("timestamp", time());
 
-$xml->saveXML();
+$xml->saveXML($filename);
 
 
-echo $adnature_events->asXML();
+echo $_POST['title'];
