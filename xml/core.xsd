@@ -13,8 +13,8 @@
     <xs:element name="owner">
         <xs:complexType>
             <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="firstname" type="xs:string"/>
                 <xs:element name="surname" type="xs:string"/>
-                <xs:element name="lastname" type="xs:string"/>
                 <xs:element name="email" type="xs:string"/>
                 <xs:element name="number" type="telenr" />
             </xs:sequence>
