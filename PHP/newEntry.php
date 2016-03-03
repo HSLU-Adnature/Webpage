@@ -7,25 +7,25 @@ $xml->registerXPathNamespace("ad", 'http://www.adnature.ch/core');
 $adnature_events = $xml->xpath("//ad:adnature_events")[0];
 
 $event = $adnature_events->addChild("event");
-$event->addChild("title", $_POST["title"]);
-$event->addChild("start_time", $_POST["start_time"]);
-$event->addChild("end_time", $_POST["end_time"]);
-$event->addChild("address", $_POST["address"]);
-$event->addChild("zip", $_POST["zip"]);
-$event->addChild("city", $_POST["city"]);
-$event->addChild("location", $_POST["location"]);
-$event->addChild("short_description", $_POST["short_description"]);
-$event->addChild("description", $_POST["description"]);
+$event->addChild("title", htmlspecialchars($_POST["title"]));
+$event->addChild("start_time", htmlspecialchars($_POST["start_time"]));
+$event->addChild("end_time", htmlspecialchars($_POST["end_time"]));
+$event->addChild("address", htmlspecialchars($_POST["address"]));
+$event->addChild("zip", htmlspecialchars($_POST["zip"]));
+$event->addChild("city", htmlspecialchars($_POST["city"]));
+$event->addChild("location", htmlspecialchars($_POST["location"]));
+$event->addChild("short_description", htmlspecialchars($_POST["short_description"]));
+$event->addChild("description", htmlspecialchars($_POST["description"]));
 
 $owner = $event->addChild("owner");
-$owner->addChild("surname", $_POST["surname"]);
-$owner->addChild("lastname", $_POST["lastname"]);
-$owner->addChild("email", $_POST["email"]);
-$owner->addChild("number", $_POST["number"]);
+$owner->addChild("surname", htmlspecialchars($_POST["surname"]));
+$owner->addChild("lastname", htmlspecialchars($_POST["lastname"]));
+$owner->addChild("email", htmlspecialchars($_POST["email"]));
+$owner->addChild("number", htmlspecialchars($_POST["number"]));
 
-$event->addChild("homepage", $_POST["homepage"]);
-$event->addChild("type", $_POST["type"]);
-$event->addChild("picture", $_POST["picture"]);
+$event->addChild("homepage", htmlspecialchars($_POST["homepage"]));
+$event->addChild("type", htmlspecialchars($_POST["type"]));
+$event->addChild("picture", htmlspecialchars($_POST["picture"]));
 $event->addChild("timestamp", time());
 
 $xml->saveXML($filename);
