@@ -28,16 +28,16 @@
                 <div class="form-group">
                     <label for="start_time" class="col-lg-2 control-label">Start Zeit</label>
                     <div class="col-lg-10">
-                        <input type="time" class="form-control" id="start_time" name="start_time" placeholder="Start Zeit"
-                               value="12:00"/>
+                        <input type="time" step='1' min="00:00:00" max="23:59:59" class="form-control" id="start_time" name="start_time" placeholder="Start Zeit"
+                               value="12:00:00"/>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="end_time" class="col-lg-2 control-label">End Zeit</label>
                     <div class="col-lg-10">
-                        <input type="time" class="form-control" id="end_time" name="end_time" placeholder="End Zeit"
-                               value="20:00"/>
+                        <input type="time" step='1' min="00:00:00" max="23:59:59" class="form-control" id="end_time" name="end_time" placeholder="End Zeit"
+                               value="20:00:00"/>
                     </div>
                 </div>
 
@@ -114,10 +114,10 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="phone" class="col-lg-2 control-label">Telefonnummer</label>
+                    <label for="number" class="col-lg-2 control-label">Telefonnummer</label>
                     <div class="col-lg-10">
-                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Telefonnummer"
-                               value="+1234567890"/>
+                        <input type="tel" class="form-control" id="number" name="number" placeholder="Telefonnummer"
+                               value="+41234567890"/>
                     </div>
                 </div>
 

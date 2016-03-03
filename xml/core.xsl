@@ -44,7 +44,7 @@
                         <p><xsl:value-of select="ad:short_description"/></p>
                     </div>
                     <div class="col-md-6 col-xs-6 col-lg-6 col-sm-6">
-                        <img class="img-rounded">
+                        <img class="img-rounded" style="max-width: 500px">
                             <xsl:attribute name="src">
                                 <xsl:value-of select="ad:picture"/>
                             </xsl:attribute>
