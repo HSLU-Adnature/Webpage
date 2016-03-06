@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<?xml-stylesheet type="text/xsl" href="core.xsl"?>
 <adnature_events xmlns="http://www.adnature.ch/core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.adnature.ch/core core.xsd" year="2016">
     <event>
+        <id>1</id>
         <title>Wandertour mit Raclette</title>
         <date>2016-06-03</date>
         <start_time>08:30:00</start_time>
@@ -24,6 +24,7 @@
         <timestamp>2016-02-20T09:00:00</timestamp>
     </event>
     <event>
+        <id>2</id>
         <title>Fondueplausch</title>
         <date>2016-06-03</date>
         <start_time>08:30:00</start_time>

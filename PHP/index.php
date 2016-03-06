@@ -1,9 +1,13 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: Daniel Eisner
- * Date: 25.02.2016
- * Time: 13:50
- */
 
-echo "Hello World!";
+    $xslDoc = new DOMDocument();
+    $xslDoc->load("../xml/event.xsl");
+
+    $xmlDoc = new DOMDocument();
+    $xmlDoc->load("../xml/core.xml");
+
+    $proc = new XSLTProcessor();
+    $proc->importStylesheet($xslDoc);
+    echo $proc->transformToXML($xmlDoc);
+
+?>
