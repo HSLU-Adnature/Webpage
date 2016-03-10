@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8"/>
+    <title>Little Adnature</title>
     <link rel="stylesheet" href="../css/bootstrap-yeti.min.css"/>
+    <link rel="shortcut icon" href="../pics/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="../pics/favicon.ico" type="image/x-icon"/>
 </head>
 <body>
-<div class="col-lg-6">
+<div class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <a href="index.html"><img class="navbar-brand" src="../pics/logo.png"/></a>
+        <div id="navbar-main" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Events</a></li>
+                <li><a href="planer.html">Planer</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="col-lg-6 container events">
     <div class="well bs-component">
         <form class="form-horizontal" action="../php/newEntry.php" method="post">
             <fieldset>

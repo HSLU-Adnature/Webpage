@@ -1,13 +1,18 @@
 <?php
+ini_set('display_errors', 1);
+$xml = new DOMDocument();
+$xml->load("../xml/core.xml");
 
-    $xslDoc = new DOMDocument();
-    $xslDoc->load("../xml/event.xsl");
+if ($xml->schemaValidate("../xml/core.xsd")) {
 
-    $xmlDoc = new DOMDocument();
-    $xmlDoc->load("../xml/core.xml");
+    $xsl = new DOMDocument;
+    $xsl->load('../xml/event.xsl');
 
-    $proc = new XSLTProcessor();
-    $proc->importStylesheet($xslDoc);
-    echo $proc->transformToXML($xmlDoc);
+    $proc = new XSLTProcessor;
+    $proc->importStyleSheet($xsl);
 
-?>
+    echo $proc->transformToXML($xml);
+
+} else {
+    echo "XML not valid!";
+}
