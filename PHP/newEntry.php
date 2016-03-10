@@ -7,8 +7,10 @@ $xml = simplexml_load_file($filename);
 $xml->registerXPathNamespace("ad", 'http://www.adnature.ch/core');
 
 $adnature_events = $xml->xpath("//ad:adnature_events")[0];
+$id = (int)$xml->xpath("//ad:event[ad:id][last()]/ad:id/text()")[0];
 
 $event = $adnature_events->addChild("event");
+$event->addChild("id", $id+1);
 $event->addChild("title", htmlspecialchars($_POST["title"]));
 $event->addChild("date", htmlspecialchars($_POST["date"]));
 $event->addChild("start_time", htmlspecialchars($_POST["start_time"]));
@@ -33,4 +35,4 @@ $event->addChild("timestamp", date("Y-m-d\TG:i:s",time()));
 
 $xml->saveXML($filename);
 
-header("Refresh:0; url=../xml/core.xml");
+header("Refresh:0; url=../php/index.php");
