@@ -1,4 +1,5 @@
 <?php
+ini_set('display_errors', 0);
 
 $filename = '../xml/core.xml';
 
@@ -38,6 +39,21 @@ if (date("g", time()) < 10) {
     $event->addChild("timestamp", date("Y-m-d\Tg:i:s", time()));
 }
 
-$xml->saveXML($filename);
+$xml_file = new DOMDocument();
+$xml_file = dom_import_simplexml($xml)->ownerDocument;
 
-header("Refresh:0; url=../php/index.php");
+if ($xml_file->schemaValidate("../xml/core.xsd")) {
+    $xml->saveXML($filename);
+
+    header("Refresh:0; url=../php/index.php");
+}
+{
+    echo "Eingabefehler, Bitte Eingabe überprüfen und korrigieren.";
+    echo "<br><button onclick=\"goBack()\">Go Back</button>";
+    echo "  <script>
+                function goBack() {
+                window.history.back();
+            }
+            </script>";
+    //header("Refresh:10; url=../html/newEntry.html");
+}
