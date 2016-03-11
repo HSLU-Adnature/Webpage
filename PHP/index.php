@@ -1,7 +1,11 @@
 <?php
-ini_set('display_errors', 1);
 $xml = new DOMDocument();
 $xml->load("../xml/core.xml");
+
+if (!isset($_COOKIE["planer"])) {
+    $data = array();
+    setcookie("planer", serialize($data), time() + 3600);
+}
 
 if ($xml->schemaValidate("../xml/core.xsd")) {
 
