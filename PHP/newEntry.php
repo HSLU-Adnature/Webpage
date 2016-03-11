@@ -5,6 +5,13 @@ $filename = '../xml/core.xml';
 
 $xml = simplexml_load_file($filename);
 
+$xml_file = new DOMDocument();
+$xml_file = dom_import_simplexml($xml)->ownerDocument;
+
+if (!($xml_file->schemaValidate("../xml/core.xsd"))) {
+    echo "Fehler beim Einlesen der XML Datei. Kontaktieren Sie ihren Administrator.";
+}
+
 $xml->registerXPathNamespace("ad", 'http://www.adnature.ch/core');
 
 $adnature_events = $xml->xpath("//ad:adnature_events")[0];
@@ -46,7 +53,7 @@ if ($xml_file->schemaValidate("../xml/core.xsd")) {
     $xml->saveXML($filename);
 
     header("Refresh:0; url=../php/index.php");
-}
+}else
 {
     echo "Eingabefehler, Bitte Eingabe überprüfen und korrigieren.";
     echo "<br><button onclick=\"goBack()\">Go Back</button>";
