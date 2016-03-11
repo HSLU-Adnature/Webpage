@@ -10,7 +10,7 @@ $adnature_events = $xml->xpath("//ad:adnature_events")[0];
 $id = (int)$xml->xpath("//ad:event[ad:id][last()]/ad:id/text()")[0];
 
 $event = $adnature_events->addChild("event");
-$event->addChild("id", $id+1);
+$event->addChild("id", $id + 1);
 $event->addChild("title", htmlspecialchars($_POST["title"]));
 $event->addChild("date", htmlspecialchars($_POST["date"]));
 $event->addChild("start_time", htmlspecialchars($_POST["start_time"]));
@@ -31,7 +31,12 @@ $owner->addChild("number", htmlspecialchars($_POST["number"]));
 $event->addChild("homepage", htmlspecialchars($_POST["homepage"]));
 $event->addChild("type", htmlspecialchars($_POST["type"]));
 $event->addChild("picture", htmlspecialchars($_POST["picture"]));
-$event->addChild("timestamp", date("Y-m-d\TG:i:s",time()));
+
+if (date("g", time()) < 10) {
+    $event->addChild("timestamp", date("Y-m-d\T0g:i:s", time()));
+} else {
+    $event->addChild("timestamp", date("Y-m-d\Tg:i:s", time()));
+}
 
 $xml->saveXML($filename);
 
