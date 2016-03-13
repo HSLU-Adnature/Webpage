@@ -20,8 +20,9 @@ function arrayRecursiveDiff($aArray1, $aArray2) {
     return $aReturn;
 }
 
-function addEventToXmlDoc($chosenEvent, $xmlDoc){
+function addEventToXmlDoc($chosenEvent, $xmlDoc, $eventAttribute){
     $event = $xmlDoc->addChild("event");
+    $event->addAttribute('type', $eventAttribute);
     $event->addChild("id", $chosenEvent[0]->id);
     $event->addChild("title", $chosenEvent[0]->title);
     $event->addChild("date", $chosenEvent[0]->date);
@@ -159,14 +160,17 @@ if (!empty($data)) {
     $match = calcMatch($events, $chosenEvents, $thrownEvents);
 
     $adnature_events = $xmlEmpty->xpath("//ad:adnature_events")[0];
-    $adnature_events = addEventToXmlDoc($match, $adnature_events);
+    $adnature_events = addEventToXmlDoc($match, $adnature_events, "match");
+    foreach ($chosenEvents as $chosenEvent) {
+        $adnature_events = addEventToXmlDoc($chosenEvent, $adnature_events, "chosen");
+    }
 
     $xslDoc = new DOMDocument();
-    $xslDoc->load("../xml/event.xsl");
+    $xslDoc->load("../xml/planer.xsl");
 
     $proc = new XSLTProcessor();
     $proc->importStylesheet($xslDoc);
-    echo $proc->transformToXML($xmlEmpty);
+    echo $proc->transformToXML($adnature_events);
 }
 
 

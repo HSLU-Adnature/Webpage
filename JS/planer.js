@@ -26,6 +26,12 @@ function drawMap(xmlEvents){
 
 }
 
+function getMapInfos() {
+    var infoDiv = document.getElementById("mapInfos");
+    console.log(infoDiv.innerHTML.trim());
+    return infoDiv.innerHTML.trim();
+}
+
 function initMap() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -33,6 +39,8 @@ function initMap() {
             drawMap(xhttp.responseXML);
         }
     };
-    xhttp.open("GET", "http://localhost/Webpage/PHP/geo.php?events=1,2", true);
+    xhttp.open("GET", "http://localhost/Webpage/PHP/geo.php?events=" + getMapInfos(), true);
     xhttp.send();
 }
+
+initMap();
