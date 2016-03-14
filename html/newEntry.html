@@ -23,150 +23,142 @@
     <div class="well bs-component">
         <form class="form-horizontal" action="../php/newEntry.php" method="post">
             <fieldset>
-                <legend>Create Event</legend>
-
-                <div class="form-group">
-                    <label for="title" class="col-lg-2 control-label">Title</label>
-                    <div class="col-lg-10">
-                        <input type="text" class="form-control" id="title" name="title" placeholder="Title"
-                               value="Wellness Oase" required/>
+                <legend>Neues Event anlegen</legend>
+                <div class="container">
+                    <div class="page-header">
+                        <h1>Event Angaben</h1>
+                        <br/>
+                        <div class="form-group">
+                            <label for="title" class="col-lg-2 control-label">Titel</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="title" name="title"
+                                       placeholder="Titel des Events" required/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="date" class="col-lg-2 control-label">Datum</label>
+                            <div class="col-lg-10">
+                                <input type="date" class="form-control" id="date" name="date" placeholder="2016-04-20"
+                                       required/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="start_time" class="col-lg-2 control-label">Startzeit</label>
+                            <div class="col-lg-10">
+                                <input type="time" step='1' min="00:00:00" max="23:59:59" class="form-control"
+                                       id="start_time"
+                                       name="start_time" placeholder="08:00" required/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="end_time" class="col-lg-2 control-label">Endzeit</label>
+                            <div class="col-lg-10">
+                                <input type="time" step='1' min="00:00:00" max="23:59:59" class="form-control"
+                                       id="end_time"
+                                       name="end_time" placeholder="12:00" required/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address" class="col-lg-2 control-label">Adresse</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="address" name="address"
+                                       placeholder="Bahnhofstrasse 1" required/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="zip" class="col-lg-2 control-label">Postleitzahl</label>
+                            <div class="col-lg-10">
+                                <input type="number" size="4" class="form-control" id="zip" name="zip"
+                                       placeholder="6000" required/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="city" class="col-lg-2 control-label">Ort</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="city" name="city" placeholder="Luzern"
+                                       required/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="short_description" class="col-lg-2 control-label">Kurzbeschreibung</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="short_description" name="short_description"
+                                       placeholder="Eine Kurzbeschreibung des Events" required/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="description" class="col-lg-2 control-label">Beschreibung</label>
+                            <div class="col-lg-10">
+                                <textarea class="form-control" rows="3" name="description" id="description"
+                                          placeholder="Ein langer Text der den Event beschreibt." required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="homepage" class="col-lg-2 control-label">Homepage</label>
+                            <div class="col-lg-10">
+                                <input type="url" class="form-control" id="homepage" name="homepage"
+                                       placeholder="http://www.google.ch" required/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="type" class="col-lg-2 control-label">Typ des Events</label>
+                            <div class="col-lg-10">
+                                <select class="form-control" id="type" name="type" required>
+                                    <option>Sport</option>
+                                    <option>Bewegung</option>
+                                    <option>Wellness</option>
+                                    <option>Kulinarisch</option>
+                                    <option>Party</option>
+                                    <option>Abenprogramm</option>
+                                    <option>Ausflug</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="picture" class="col-lg-2 control-label">Bild-URL</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="picture" name="picture"
+                                       placeholder="http://i.imgur.com/eD8bpKj.png" required/>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="date" class="col-lg-2 control-label">Datum</label>
-                    <div class="col-lg-10">
-                        <input type="date" class="form-control" id="date" name="date" placeholder="Datum"
-                               value="2016-04-20" required/>
+                    <div class="page-header">
+                        <h1>Veranstalter Angaben</h1>
+                        <br/>
+                        <div class="form-group">
+                            <label for="firstname" class="col-lg-2 control-label">Vorname</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="firstname" name="firstname"
+                                       placeholder="Vorname" required/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="surname" class="col-lg-2 control-label">Nachname</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="surname" name="surname"
+                                       placeholder="Nachname" required/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-lg-2 control-label">Email</label>
+                            <div class="col-lg-10">
+                                <input type="email" class="form-control" id="email" name="email"
+                                       placeholder="test@outlook.com" required/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="number" class="col-lg-2 control-label">Telefonnummer</label>
+                            <div class="col-lg-10">
+                                <input type="tel" class="form-control" id="number" name="number"
+                                       placeholder="+41624567890" required/>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="start_time" class="col-lg-2 control-label">Start Zeit</label>
-                    <div class="col-lg-10">
-                        <input type="time" step='1' min="00:00:00" max="23:59:59" class="form-control" id="start_time" name="start_time" placeholder="Start Zeit"
-                               value="12:00:00" required/>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="end_time" class="col-lg-2 control-label">End Zeit</label>
-                    <div class="col-lg-10">
-                        <input type="time" step='1' min="00:00:00" max="23:59:59" class="form-control" id="end_time" name="end_time" placeholder="End Zeit"
-                               value="20:00:00" required/>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="address" class="col-lg-2 control-label">Adresse</label>
-                    <div class="col-lg-10">
-                        <input type="text" class="form-control" id="address" name="address" placeholder="Adresse"
-                               value="Test Address" required/>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="zip" class="col-lg-2 control-label">PLZ</label>
-                    <div class="col-lg-10">
-                        <input type="number" size="4" class="form-control" id="zip" name="zip" placeholder="PLZ"
-                               value="6000" required/>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="city" class="col-lg-2 control-label">Ort</label>
-                    <div class="col-lg-10">
-                        <input type="text" class="form-control" id="city" name="city" placeholder="Ort"
-                               value="Luzern" required/>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="short_description" class="col-lg-2 control-label">Kurzbeschreibung</label>
-                    <div class="col-lg-10">
-                        <input type="text" class="form-control" id="short_description" name="short_description" placeholder="Kurzbeschreibung"
-                               value="Nur ein Testevent" required/>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="description" class="col-lg-2 control-label">Beschreibung</label>
-                    <div class="col-lg-10">
-                        <textarea class="form-control" rows="3" name="description" id="description" required>Ein langer Text der den Event beschreibt.</textarea>
-                        <!--<span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>-->
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="location" class="col-lg-2 control-label">Location</label>
-                    <div class="col-lg-10">
-                        <input type="text" class="form-control" id="location" name="location" placeholder="Location"
-                               value="Bern" required/>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="firstname" class="col-lg-2 control-label">Vorname</label>
-                    <div class="col-lg-10">
-                        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Vorname"
-                               value="TestVorname" required/>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="surname" class="col-lg-2 control-label">Nachname</label>
-                    <div class="col-lg-10">
-                        <input type="text" class="form-control" id="surname" name="surname" placeholder="Nachname"
-                               value="TestNachname" required/>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="email" class="col-lg-2 control-label">Email</label>
-                    <div class="col-lg-10">
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Email"
-                               value="asdf@asdf.ch" required/>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="number" class="col-lg-2 control-label">Telefonnummer</label>
-                    <div class="col-lg-10">
-                        <input type="tel" class="form-control" id="number" name="number" placeholder="Telefonnummer"
-                               value="+41234567890" required/>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="homepage" class="col-lg-2 control-label">Homepage</label>
-                    <div class="col-lg-10">
-                        <input type="url" class="form-control" id="homepage" name="homepage" placeholder="Homepage"
-                               value="http://www.google.ch" required/>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="type" class="col-lg-2 control-label">Type</label>
-                    <div class="col-lg-10">
-                        <select class="form-control" id="type" name="type" required>
-                            <option>Wanderung</option>
-                            <option>Abenteuer</option>
-                            <option>Essen</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="picture" class="col-lg-2 control-label">Bild</label>
-                    <div class="col-lg-10">
-                        <input type="text" class="form-control" id="picture" name="picture" placeholder="Bild"
-                               value="http://oberwirt.de/userfiles/images/500_wellness_01.jpg" required/>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="col-lg-10 col-lg-offset-2">
-                        <button type="reset" class="btn btn-default">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-2">
+                            <button type="reset" onclick="location.href='../php/index.php'" class="btn btn-default">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
                     </div>
                 </div>
             </fieldset>

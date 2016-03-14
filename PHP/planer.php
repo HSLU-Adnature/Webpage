@@ -196,7 +196,7 @@ if (isset($_GET['thrown'])) {
     $thrownID = $_GET['thrown'];
     if (!in_array($thrownID, $thrownData)) {
         array_push($thrownData, $thrownID);
-        setcookie("thrown", serialize($thrownData), time() + 3600);
+        setcookie("thrown", serialize($thrownData), time() + 180);
     }
 }
 

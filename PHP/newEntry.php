@@ -21,12 +21,12 @@ $event = $adnature_events->addChild("event");
 $event->addChild("id", $id + 1);
 $event->addChild("title", htmlspecialchars($_POST["title"]));
 $event->addChild("date", htmlspecialchars($_POST["date"]));
-$event->addChild("start_time", htmlspecialchars($_POST["start_time"]));
-$event->addChild("end_time", htmlspecialchars($_POST["end_time"]));
+$event->addChild("start_time", htmlspecialchars($_POST["start_time"]).":00");
+$event->addChild("end_time", htmlspecialchars($_POST["end_time"]).":00");
 $event->addChild("address", htmlspecialchars($_POST["address"]));
 $event->addChild("zip", htmlspecialchars($_POST["zip"]));
 $event->addChild("city", htmlspecialchars($_POST["city"]));
-$event->addChild("location", htmlspecialchars($_POST["location"]));
+$event->addChild("location", "location");
 $event->addChild("short_description", htmlspecialchars($_POST["short_description"]));
 $event->addChild("description", htmlspecialchars($_POST["description"]));
 
