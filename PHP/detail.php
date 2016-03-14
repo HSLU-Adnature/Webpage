@@ -47,8 +47,6 @@ if ($xml->schemaValidate("../xml/core.xsd")) {
 
     }
 
-    $result = $xpath->query($query, $xml);
-
     $xsl = new DOMDocument;
     $xsl->load('../xml/event_detail.xsl');
 
