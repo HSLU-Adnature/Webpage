@@ -39,7 +39,7 @@ function initMap() {
             drawMap(xhttp.responseXML);
         }
     };
-    xhttp.open("GET", "http://localhost/Webpage/PHP/geo.php?events=" + getMapInfos(), true);
+    xhttp.open("GET", "../PHP/geo.php?events=" + getMapInfos(), true);
     xhttp.send();
 }
 

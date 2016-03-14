@@ -126,6 +126,7 @@ function calcMatch ($events, $chosenEvents, $thrownEvents){
 
 
 $data = array();
+$thrownData = array();
 
 $xmlDoc = simplexml_load_file("../xml/core.xml");
 $xmlDoc->registerXPathNamespace("ad", 'http://www.adnature.ch/core');
@@ -135,12 +136,17 @@ $xmlEmpty->registerXPathNamespace("ad", 'http://www.adnature.ch/core');
 
 
 
-/*if (!isset($_COOKIE["planer"])) {
+if (!isset($_COOKIE["planer"])) {
     setcookie("planer", serialize($data), time() + 3600);
 } else {
     $data = unserialize($_COOKIE['planer']);
 }
 
+if (!isset($_COOKIE["thrown"])) {
+    setcookie("thrown", serialize($thrownData), time() + 3600);
+} else {
+    $thrownData = unserialize($_COOKIE['thrown']);
+}
 
 if (isset($_GET['chosen'])) {
     $data = unserialize($_COOKIE['planer']);
@@ -159,16 +165,22 @@ if (isset($_GET['deleted'])) {
         setcookie("planer", serialize($data), time() + 3600);
     }
 }
-*/
-$data[0] = $_GET['chosen'];
+
 $events = $xmlDoc->xpath("//ad:event");
 $chosenEvents = array();
 $thrownEvents = array();
+
+$adnature_events = $xmlEmpty->xpath("//ad:adnature_events")[0];
+
 if (!empty($data)) {
-    $adnature_events = $xmlEmpty->xpath("//ad:adnature_events")[0];
     foreach ($data as $value) {
         $chosenEvent = $xmlDoc->xpath("//ad:event[ad:id=$value]")[0];
         array_push($chosenEvents, $chosenEvent);
+    }
+
+    foreach ($thrownData as $thrown) {
+        $thrownEvent = $xmlDoc->xpath("//ad:event[ad:id=$value]")[0];
+        array_push($thrownEvents, $thrownEvent);
     }
 
     $match = calcMatch($events, $chosenEvents, $thrownEvents);
@@ -181,10 +193,12 @@ if (!empty($data)) {
         $adnature_events = addEventToXmlDoc($chosenEvent, $adnature_events, "chosen");
     }
 
-    $xslDoc = new DOMDocument();
-    $xslDoc->load("../xml/planer.xsl");
 
-    $proc = new XSLTProcessor();
-    $proc->importStylesheet($xslDoc);
-    echo $proc->transformToXML($adnature_events);
 }
+
+$xslDoc = new DOMDocument();
+$xslDoc->load("../xml/planer.xsl");
+
+$proc = new XSLTProcessor();
+$proc->importStylesheet($xslDoc);
+echo $proc->transformToXML($adnature_events);
