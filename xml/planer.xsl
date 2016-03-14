@@ -29,8 +29,8 @@
                 </div>
                 <xsl:apply-templates select="ad:adnature_events/ad:event[@type='match']"/>
                 <div class="container">
-                    <div class="page-header">
-                        <h1>Timeline</h1>
+                    <div class="page-header border-header">
+                        <h1 style="float:left">Timeline<h4 class="brackets">&#160; (bereits geplant)</h4></h1>
                     </div>
                 </div>
                 <div class="container">
@@ -62,7 +62,12 @@
         <div class="container">
             <div class="panel panel-success">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><xsl:value-of select="ad:date"/></h3>
+                    <h3 class="panel-title">
+                        <xsl:copy>
+                            <xsl:call-template name="formatdate">
+                            </xsl:call-template>
+                        </xsl:copy>
+                    </h3>
                 </div>
                 <div class="panel-body background-color">
                     <div class="row">
@@ -70,9 +75,10 @@
                             <h2>
                                 <xsl:value-of select="ad:title"/>
                             </h2>
-                            <p>
+                            <p class="page-header">
                                 <xsl:value-of select="ad:short_description"/>
                             </p>
+                            <h5 class="italic"><xsl:apply-templates select="ad:start_time"/> - <xsl:apply-templates select="ad:end_time"/></h5>
                         </div>
                         <div class="col-md-6 col-xs-6 col-lg-6 col-sm-6">
                             <img class="img-rounded" style="max-width: 500px">
@@ -108,16 +114,10 @@
                 <xsl:value-of select="ad:title"/>
             </div>
             <div class="col-lg-1 col-md-1 col-xs-1 col-sm-1">
-                <xsl:copy>
-                    <xsl:call-template name="formatstart">
-                    </xsl:call-template>
-                </xsl:copy>
+                <xsl:apply-templates select="ad:start_time"/>
             </div>
             <div class="col-lg-1 col-md-1 col-xs-1 col-sm-1">
-                <xsl:copy>
-                    <xsl:call-template name="formatend">
-                    </xsl:call-template>
-                </xsl:copy>
+                <xsl:apply-templates select="ad:end_time"/>
             </div>
             <a class="col-lg-1 col-md-1 col-xs-1 col-sm-1 btn-danger">
                 <xsl:attribute name="href">planer.php?deleted=<xsl:value-of select="ad:id"/>
@@ -132,22 +132,40 @@
     <xsl:template match="ad:idList">
         <xsl:value-of select="ad:list"/>
     </xsl:template>
-    <xsl:template name="formatstart">
+    <xsl:template match="ad:start_time">
+        <xsl:copy>
+            <xsl:call-template name="formattime">
+                <xsl:with-param name="TimeStr" select="."/>
+            </xsl:call-template>
+        </xsl:copy>
+    </xsl:template>
+    <xsl:template match="ad:end_time">
+        <xsl:copy>
+            <xsl:call-template name="formattime">
+                <xsl:with-param name="TimeStr" select="."/>
+            </xsl:call-template>
+        </xsl:copy>
+    </xsl:template>
+    <xsl:template name="formattime">
+        <xsl:param name="TimeStr"/>
         <xsl:variable name="hh">
-            <xsl:value-of select="substring(ad:start_time,1,2)"/>
+            <xsl:value-of select="substring($TimeStr,1,2)"/>
         </xsl:variable>
         <xsl:variable name="mm">
-            <xsl:value-of select="substring(ad:start_time,4,2)"/>
+            <xsl:value-of select="substring($TimeStr,4,2)"/>
         </xsl:variable>
         <xsl:value-of select="concat($hh,':', $mm)"/>
     </xsl:template>
-    <xsl:template name="formatend">
-        <xsl:variable name="hh">
-            <xsl:value-of select="substring(ad:end_time,1,2)"/>
-        </xsl:variable>
+    <xsl:template name="formatdate">
         <xsl:variable name="mm">
-            <xsl:value-of select="substring(ad:end_time,4,2)"/>
+            <xsl:value-of select="substring(ad:date,6,2)"/>
         </xsl:variable>
-        <xsl:value-of select="concat($hh,':', $mm)"/>
+        <xsl:variable name="dd">
+            <xsl:value-of select="substring(ad:date,9,2)"/>
+        </xsl:variable>
+        <xsl:variable name="yyyy">
+            <xsl:value-of select="substring(ad:date,1,4)"/>
+        </xsl:variable>
+        <xsl:value-of select="concat($dd,'.', $mm, '.', $yyyy)"/>
     </xsl:template>
 </xsl:stylesheet>

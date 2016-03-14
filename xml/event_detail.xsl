@@ -41,12 +41,12 @@
     </xsl:template>
     <xsl:template match="ad:event">
         <div class="container">
-            <div class="page-header">
+            <div class="page-header border-header">
                 <div class="row"></div>
                 <h1 style="float:left">
                     <xsl:value-of select="ad:title"/>
                 </h1>
-                <a class="btn btn-succes detail">
+                <a class="btn detail">
                     <xsl:attribute name="href">planer.php?chosen=<xsl:value-of select="ad:id"/>
                     </xsl:attribute>
                     Plan it!
