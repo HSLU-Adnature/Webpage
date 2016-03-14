@@ -26,35 +26,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
-                    <div class="page-header">
-                        <h1>Planer</h1>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="page-header">
-                        <h1>Match</h1>
-                    </div>
-                </div>
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Possible</h3>
-                    </div>
-                    <div class="panel-body jumbotron">
-                        <div class="row">
-                            <xsl:apply-templates select="ad:adnature_events/ad:event[@ad:type='match']">
-                                <xsl:sort select="ad:date"/>
-                            </xsl:apply-templates>
-                        </div>
-                    </div>
-                </div>
+                <xsl:apply-templates select="ad:adnature_events/ad:event[@type='match']"></xsl:apply-templates>
                 <div class="container">
                     <div class="page-header">
                         <h1>Timeline</h1>
                     </div>
                 </div>
                 <div class="container">
-
+                    <div class="row">
+                        <div class="col-md-1 col-xs-1 col-lg-1 col-sm-1">
+                            <b>
+                                <xsl:apply-templates
+                                        select="ad:adnature_events/ad:event[@type='chosen']/ad:start_time"></xsl:apply-templates>
+                            </b>
+                        </div>
+                    </div>
                 </div>
                 <div class="container">
                     <div class="page-header">
@@ -71,25 +57,54 @@
             </body>
         </html>
     </xsl:template>
-    <xsl:template match="ad:event[@ad:type='match']">
-        <div class="panel-body jumbotron">
-            <div class="row">
-                <div class="col-md-6 col-xs-6 col-lg-6 col-sm-6">
-                    <h2>
-                        <xsl:value-of select="ad:title"/>
-                    </h2>
-                    <p>
-                        <xsl:value-of select="ad:short_description"/>
-                    </p>
+    <xsl:template match="ad:event[@type='match']">
+        <div class="container">
+            <div class="page-header">
+                <h1>Vorschlag</h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Possible</h3>
                 </div>
-                <div class="col-md-6 col-xs-6 col-lg-6 col-sm-6">
-                    <img class="img-rounded" style="max-width: 500px">
-                        <xsl:attribute name="src">
-                            <xsl:value-of select="ad:picture"/>
-                        </xsl:attribute>
-                    </img>
+                <div class="panel-body jumbotron">
+                    <div class="row">
+                        <div class="col-md-6 col-xs-6 col-lg-6 col-sm-6">
+                            <h2>
+                                <xsl:value-of select="ad:title"/>
+                            </h2>
+                            <p>
+                                <xsl:value-of select="ad:short_description"/>
+                            </p>
+                        </div>
+                        <div class="col-md-6 col-xs-6 col-lg-6 col-sm-6">
+                            <img class="img-rounded" style="max-width: 500px">
+                                <xsl:attribute name="src">
+                                    <xsl:value-of select="ad:picture"/>
+                                </xsl:attribute>
+                            </img>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </xsl:template>
+    <xsl:template match="ad:start_time">
+        <xsl:copy>
+            <xsl:call-template name="formattime">
+                <xsl:with-param name="TimeStr" select="."/>
+            </xsl:call-template>
+        </xsl:copy>
+    </xsl:template>
+    <xsl:template name="formattime">
+        <xsl:param name="TimeStr"/>
+        <xsl:variable name="hh">
+            <xsl:value-of select="substring($TimeStr,1,2)"/>
+        </xsl:variable>
+        <xsl:variable name="mm">
+            <xsl:value-of select="substring($TimeStr,4,2)"/>
+        </xsl:variable>
+        <xsl:value-of select="concat($hh,':', $mm)"/>
     </xsl:template>
 </xsl:stylesheet>
