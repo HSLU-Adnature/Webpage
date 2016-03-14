@@ -1,24 +1,22 @@
 <?php
 
-function arrayRecursiveDiff($aArray1, $aArray2) {
-    $aReturn = array();
-
-    foreach ($aArray1 as $mKey => $mValue) {
-        if (array_key_exists($mKey, $aArray2)) {
-            if (is_array($mValue)) {
-                $aRecursiveDiff = arrayRecursiveDiff($mValue, $aArray2[$mKey]);
-                if (count($aRecursiveDiff)) { $aReturn[$mKey] = $aRecursiveDiff; }
-            } else {
-                if ($mValue != $aArray2[$mKey]) {
-                    $aReturn[$mKey] = $mValue;
-                }
-            }
-        } else {
-            $aReturn[$mKey] = $mValue;
+function arrayRecursiveDiff($eventsArray1, $eventsArray2) {
+    $aRetun = array();
+    foreach($eventsArray1 as $event1){
+        if(!in_array($event1, $eventsArray2)){
+            array_push($aRetun, $event1);
         }
     }
-    return $aReturn;
+    foreach($eventsArray2 as $event2){
+        if(!in_array($event2, $eventsArray2)){
+            array_push($aRetun, $event2);
+        }
+    }
+    return $aRetun;
+
 }
+
+
 
 function addEventToXmlDoc($chosenEvent, $xmlDoc, $eventAttribute){
     $event = $xmlDoc->addChild("event");
@@ -50,9 +48,14 @@ function eleminateTimeoverlap($possibleEvents, $chosenEvents) {
     $notPossibleEvents = array();
     foreach($possibleEvents as $possibleEvent){
         foreach($chosenEvents as $chosenEvent) {
-            if(new DateTime($possibleEvent->start_time) < new DateTime($chosenEvent->end_time)
-                || new DateTime($possibleEvent->end_time) < new DateTime($chosenEvent->start_time)) {
-                array_push($notPossibleEvents, $possibleEvent);
+            if(new DateTime($possibleEvent->start_time) < new DateTime($chosenEvent->start_time)){
+                if(new DateTime($chosenEvent->start_time) < new DateTime($possibleEvent->end_time)){
+                    array_push($notPossibleEvents, $possibleEvent);
+                }
+            }else{
+                if(new DateTime($chosenEvent->end_time) > new DateTime($possibleEvent->start_time)){
+                    array_push($notPossibleEvents, $possibleEvent);
+                }
             }
         }
     }
@@ -160,7 +163,9 @@ if (!empty($data)) {
     $match = calcMatch($events, $chosenEvents, $thrownEvents);
 
     $adnature_events = $xmlEmpty->xpath("//ad:adnature_events")[0];
-    $adnature_events = addEventToXmlDoc($match, $adnature_events, "match");
+    if(!empty($match)) {
+        $adnature_events = addEventToXmlDoc($match, $adnature_events, "match");
+    }
     foreach ($chosenEvents as $chosenEvent) {
         $adnature_events = addEventToXmlDoc($chosenEvent, $adnature_events, "chosen");
     }
