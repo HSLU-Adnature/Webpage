@@ -39,6 +39,7 @@
     </xsl:template>
     <xsl:template match="ad:event">
         <div class="container">
+            <xsl:attribute name="onclick">location.href='detail.php?id=<xsl:value-of select="ad:id"/>'</xsl:attribute>
             <div class="jumbotron">
                 <div class="row">
                     <div class="col-md-6 col-xs-6 col-lg-6 col-sm-6">
