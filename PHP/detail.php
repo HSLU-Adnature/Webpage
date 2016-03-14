@@ -13,9 +13,9 @@ if ($xml->schemaValidate("../xml/core.xsd")) {
     $xml_file->registerXPathNamespace("ad", 'http://www.adnature.ch/core');
 
     if (isset($_GET["id"])) {
-        $adnature_events = $xml->xpath("//ad:event[ad:id=" .  htmlspecialchars($_GET["id"]) . "]");
+        $adnature_events = $xml_file->xpath("//ad:event[ad:id=" . htmlspecialchars($_GET["id"]) . "]");
     } else {
-        $adnature_events = $xml;
+        $adnature_events = $xml_file->xpath("//ad:event");
     }
 
     $xsl = new DOMDocument;
@@ -24,7 +24,7 @@ if ($xml->schemaValidate("../xml/core.xsd")) {
     $proc = new XSLTProcessor;
     $proc->importStyleSheet($xsl);
 
-    echo $proc->transformToXML($adnature_events);
+    echo $proc->transformToXML(dom_import_simplexml($adnature_events[0])->ownerDocument);
 
 } else {
     echo "XML not valid!";
