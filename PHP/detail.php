@@ -12,8 +12,8 @@ if ($xml->schemaValidate("../xml/core.xsd")) {
 
     $xml_file->registerXPathNamespace("ad", 'http://www.adnature.ch/core');
 
-    if (isset($_POST["id"])) {
-        $adnature_events = $xml->xpath("//ad:event[ad:id=" . $_POST["id"] . "]");
+    if (isset($_GET["id"])) {
+        $adnature_events = $xml->xpath("//ad:event[ad:id=" .  htmlspecialchars($_GET["id"]) . "]");
     } else {
         $adnature_events = $xml;
     }
