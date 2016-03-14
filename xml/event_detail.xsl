@@ -123,10 +123,7 @@
             </div>
             <div class="panel-body">
                 <div>
-                    <xsl:value-of select="ad:firstname"/>
-                </div>
-                <div>
-                    <xsl:value-of select="ad:surname"/>
+                    <xsl:value-of select="ad:firstname"/>&#160;<xsl:value-of select="ad:surname"/>
                 </div>
                 <div>
                     <a>
