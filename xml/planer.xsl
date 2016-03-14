@@ -31,6 +31,9 @@
                 <div class="container">
                     <div class="page-header border-header">
                         <h1 style="float:left">Timeline<h4 class="brackets">&#160; (bereits geplant)</h4></h1>
+                        <a style="float:right" href="print.php">
+                            <img style="width:50px; margin-top:-50px" src="../pics/print.png"/>
+                        </a>
                     </div>
                 </div>
                 <div class="container">
