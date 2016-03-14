@@ -16,8 +16,6 @@ function arrayRecursiveDiff($eventsArray1, $eventsArray2) {
 
 }
 
-
-
 function addEventToXmlDoc($chosenEvent, $xmlDoc, $eventAttribute){
     $event = $xmlDoc->addChild("event");
     $event->addAttribute('type', $eventAttribute);
@@ -56,6 +54,18 @@ function eleminateTimeoverlap($possibleEvents, $chosenEvents) {
                 if(new DateTime($chosenEvent->end_time) > new DateTime($possibleEvent->start_time)){
                     array_push($notPossibleEvents, $possibleEvent);
                 }
+            }
+        }
+    }
+    return arrayRecursiveDiff($possibleEvents, $notPossibleEvents);
+}
+
+function eleminateNotSameDay($possibleEvents, $chosenEvents) {
+    $notPossibleEvents = array();
+    foreach($possibleEvents as $possibleEvent) {
+        foreach($chosenEvents as $chosenEvent) {
+            if(new DateTime($chosenEvent->date) != new DateTime($possibleEvent->date)){
+                array_push($notPossibleEvents, $possibleEvent);
             }
         }
     }
@@ -109,6 +119,7 @@ function calcNearest($possibleEvents, $chosenEvents) {
 function calcMatch ($events, $chosenEvents, $thrownEvents){
     $possibleEvents = arrayRecursiveDiff($events, $chosenEvents);
     $possibleEvents = arrayRecursiveDiff($possibleEvents, $thrownEvents);
+    $possibleEvents = eleminateNotSameDay($possibleEvents, $chosenEvents);
     $possibleEvents = eleminateTimeoverlap($possibleEvents, $chosenEvents);
     return calcNearest($possibleEvents, $chosenEvents);
 }
