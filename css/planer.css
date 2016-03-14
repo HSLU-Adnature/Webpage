@@ -11,3 +11,10 @@
 .background-color {
     background-color: #fafafa;
 }
+
+.detail {
+    font-size: 39px;
+    margin-bottom: -40px;
+    padding-left: 50%;
+    padding-top: 15px;
+}

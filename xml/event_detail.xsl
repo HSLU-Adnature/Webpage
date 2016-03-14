@@ -6,6 +6,7 @@
                 <meta charset="UTF-8"/>
                 <title>Little Adnature</title>
                 <link rel="stylesheet" href="../css/bootstrap-yeti.min.css"/>
+                <link rel="stylesheet" href="../css/planer.css"/>
                 <link rel="shortcut icon" href="../pics/favicon.ico" type="image/x-icon"/>
                 <link rel="icon" href="../pics/favicon.ico" type="image/x-icon"/>
             </head>
@@ -41,9 +42,15 @@
     <xsl:template match="ad:event">
         <div class="container">
             <div class="page-header">
-                <h1>
+                <div class="row"></div>
+                <h1 style="float:left">
                     <xsl:value-of select="ad:title"/>
                 </h1>
+                <a class="btn btn-succes detail">
+                    <xsl:attribute name="href">planer.php?chosen=<xsl:value-of select="ad:id"/>
+                    </xsl:attribute>
+                    Plan it!
+                </a>
                 <div id="mapInfos" style="visibility: hidden">
                     <xsl:value-of select="ad:id"/>
                 </div>
