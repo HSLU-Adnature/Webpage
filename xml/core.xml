@@ -1,72 +1,253 @@
 <?xml version="1.0"?>
-<adnature_events xmlns="http://www.adnature.ch/core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.adnature.ch/core core.xsd" year="2016">
+<adnature_events xmlns="http://www.adnature.ch/core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://www.adnature.ch/core core.xsd" year="2016">
     <event>
         <id>1</id>
-        <title>Wandertour mit Raclette</title>
-        <date>2016-06-03</date>
-        <start_time>08:30:00</start_time>
-        <end_time>11:00:00</end_time>
-        <address>Gotthardstrasse 4</address>
-        <zip>6490</zip>
-        <city>Andermatt</city>
-        <location>Andermatt</location>
-        <short_description>Wandertour durch die sch&#xF6;ne Natur mit anschliessendem Raclettessen</short_description>
-        <description>Wandertour hindurch durch das unber&#xFC;hrte Wandertal der Urnerberge. Viele Aussichtsm&#xF6;glichkeiten. Am Mittag wartet ein schmackhaftes Raclett auf Sie.</description>
+        <title>Cinédîner</title>
+        <date>2016-04-16</date>
+        <start_time>18:15:00</start_time>
+        <end_time>23:00:00</end_time>
+        <address>Haldenstrasse 4</address>
+        <zip>6006</zip>
+        <city>Luzern</city>
+        <location>location</location>
+        <short_description>6. Luzerner Cinédîner</short_description>
+        <description>Erleben Sie den Kultevent mit Freunden das einzigartige Kinovergnügen. Nach dem Welcome-Apéro und dem genussreichen 3-Gang-Menu, natürlich passend zum Film, führen wir in der historischen Halle des 1871 grosses Kino vor...
+
+            Ab 18.15 -19.00 Apéro
+            19.00 Begrüssung und Vorspeise
+            19.45 - 20.25 Start Film Teil 1
+            20.30 Hauptgang
+            21.10 Film Teil 2
+            ca. 22.35 Dessert, Kaffee und Ausklang
+        </description>
         <owner>
-            <firstname>Hansi</firstname>
-            <surname>Hinterseher</surname>
-            <email>hans.hinterseher@outlook.com</email>
-            <number>+41418701734</number>
+            <firstname>Restaurant</firstname>
+            <surname>1871</surname>
+            <email>restaurant@1871.ch</email>
+            <number>+41414221871</number>
         </owner>
-        <homepage>http://www.andermatt.ch</homepage>
-        <type>Wanderung</type>
-        <picture>http://binders.at/images/top/sommer_wandern.jpg</picture>
+        <homepage>http://www.1871.ch/cinediner</homepage>
+        <type>Abendprogramm</type>
+        <picture>http://res.cloudinary.com/pixeltex/image/fetch/q_80,w_600/http%3A%2F%2Fcdn.guidle.com%2Ffiles%2Fpics%2F2014071021347800.5117764526496885.jpg</picture>
         <timestamp>2016-02-20T09:00:00</timestamp>
     </event>
     <event>
         <id>2</id>
-        <title>Fondueplausch</title>
-        <date>2016-06-03</date>
-        <start_time>13:30:00</start_time>
-        <end_time>16:00:00</end_time>
-        <address>Gotthardstrasse 4</address>
-        <zip>6490</zip>
-        <city>Andermatt</city>
-        <location>Andermatt</location>
-        <short_description>Feines Fondue f&#xFC;r die ganze Familie!</short_description>
-        <description>Wandertour hindurch durch das unber&#xFC;hrte Wandertal der Urnerberge. Viele Aussichtsm&#xF6;glichkeiten. Am Mittag wartet ein schmackhaftes Raclett auf Sie.</description>
+        <title>Stadtführung Luzern</title>
+        <date>2016-04-09</date>
+        <start_time>09:45:00</start_time>
+        <end_time>11:45:00</end_time>
+        <address>Zentralstrasse 5</address>
+        <zip>6003</zip>
+        <city>Luzern</city>
+        <location>location</location>
+        <short_description>Besuchen Sie mit uns die weltberühmten Sehenswürdigkeiten.</short_description>
+        <description>Besuchen Sie mit uns die weltberühmten Sehenswürdigkeiten wie die Kapellbrücke mit dem achteckigen Wasserturm, die Jesuitenkirche und das KKL Luzern und erfahren Sie Wichtiges und Witziges über die Geschichte und den Alltag der Luzerner.
+            Sie entdecken versteckte Gassen, belebte Plätze und erhaschen einen Blick auf die Krone der Stadt, die Museggmauer. Altbekanntes und viel Neues – Luzern freut sich auf Sie!
+        </description>
         <owner>
-            <firstname>Hansi</firstname>
-            <surname>Hinterseher</surname>
-            <email>hans.hinterseher@outlook.com</email>
-            <number>+41418701734</number>
+            <firstname>Luzern Tourismus</firstname>
+            <surname>AG</surname>
+            <email>luzern@luzern.com</email>
+            <number>+41412271717</number>
         </owner>
-        <homepage>http://www.andermatt.ch</homepage>
-        <type>Wanderung</type>
-        <picture>https://storage.cpstatic.ch/storage/deal_detail_large/fondueplausch-fur-2-personen--78100.jpg</picture>
+        <homepage>http://www.luzern.com/de/index.cfm</homepage>
+        <type>Kultur</type>
+        <picture>http://res.cloudinary.com/pixeltex/image/fetch/q_80,w_600/http%3A%2F%2Fcdn.guidle.com%2Ffiles%2Fpics%2F2016112932148040.03960043052211404.jpg</picture>
         <timestamp>2016-02-20T09:00:00</timestamp>
     </event>
     <event>
         <id>3</id>
-        <title>Ganze Tag Fondue</title>
-        <date>2016-06-03</date>
-        <start_time>09:30:00</start_time>
-        <end_time>16:00:00</end_time>
-        <address>Gotthardstrasse 4</address>
-        <zip>6490</zip>
-        <city>Andermatt</city>
-        <location>Andermatt</location>
-        <short_description>Feines Fondue f&#xFC;r die ganze Familie!</short_description>
-        <description>Wandertour hindurch durch das unber&#xFC;hrte Wandertal der Urnerberge. Viele Aussichtsm&#xF6;glichkeiten. Am Mittag wartet ein schmackhaftes Raclett auf Sie.</description>
+        <title>goactive</title>
+        <date>2016-04-16</date>
+        <start_time>12:00:00</start_time>
+        <end_time>17:00:00</end_time>
+        <address>Horwerstrasse 87</address>
+        <zip>6000</zip>
+        <city>Luzern</city>
+        <location>location</location>
+        <short_description>Die goactive ist eine erlebnisorientierte Publikumsmesse rund um Fitness, Sport und Wellness.</short_description>
+        <description>Die goactive ist eine erlebnisorientierte Publikumsmesse rund um Fitness, Sport und Wellness.
+            Interessierte MessebesucherInnnen haben die Möglichkeit, diverse Sportarten wie In- und Outdoortrends, Ausdauer- und Kraftsport, Ballsport, Bewegung/Sport ab 50+ kennenzulernen und auszuprobieren. Im Mittelpunkt der Messe stehen Themen rund um:
+
+            Fitness
+            Sport
+            Wellness
+            Schwerpunktthemen
+        </description>
         <owner>
-            <firstname>Hansi</firstname>
-            <surname>Hinterseher</surname>
-            <email>hans.hinterseher@outlook.com</email>
+            <firstname>goactive</firstname>
+            <surname></surname>
+            <email>info@goactive-messe.ch</email>
             <number>+41418701734</number>
         </owner>
-        <homepage>http://www.andermatt.ch</homepage>
-        <type>Wanderung</type>
-        <picture>https://storage.cpstatic.ch/storage/deal_detail_large/fondueplausch-fur-2-personen--78100.jpg</picture>
+        <homepage>http://www.goactive-messe.ch/</homepage>
+        <type>Sport</type>
+        <picture>http://res.cloudinary.com/pixeltex/image/fetch/q_80,w_600/http%3A%2F%2Fcdn.guidle.com%2Ffiles%2Fpics%2F20157241443149640.3028091039055894.png</picture>
         <timestamp>2016-02-20T09:00:00</timestamp>
+    </event>
+    <event>
+        <id>4</id>
+        <title>Mittagsschiff</title>
+        <date>2016-04-09</date>
+        <start_time>12:00:00</start_time>
+        <end_time>13:47:00</end_time>
+        <address>Bahnhofquai</address>
+        <zip>6003</zip>
+        <city>Luzern</city>
+        <location>location</location>
+        <short_description>Mittagspause verfeinern.</short_description>
+        <description>Auf der Rundfahrt nach Vitznau kommen Sie in den Genuss eines saisonalen Salat- und Suppenbuffets
+            sowie von wechselnden Fleisch-, Fisch- und vegetarischen Spezialit&#xE4;ten.&#xD;
+            &#xD;
+            Tischreservationen bis 11 Uhr
+        </description>
+        <owner>
+            <firstname>Schifffahrtsgesellschaft des Vierwaldst&#xE4;ttersees</firstname>
+            <surname>(SGV)</surname>
+            <email>info@lakelucerne.ch</email>
+            <number>+41413676767</number>
+        </owner>
+        <homepage>http://www.lakelucerne.ch/</homepage>
+        <type>Kulinarisch</type>
+        <picture>http://res.cloudinary.com/pixeltex/image/fetch/q_80,w_600/http%3A%2F%2Fcdn.guidle.com%2Ffiles%2Fpics%2F2013211159431360.19424737373265832.jpg</picture>
+        <timestamp>2016-03-14T09:52:32</timestamp>
+    </event>
+    <event>
+        <id>5</id>
+        <title>Annamateur and the Beuys</title>
+        <date>2016-04-09</date>
+        <start_time>20:00:00</start_time>
+        <end_time>23:00:00</end_time>
+        <address>Bundesplatz 14</address>
+        <zip>6003</zip>
+        <city>Luzern</city>
+        <location>location</location>
+        <short_description>In ihrem neuen Programm macht Annamateur nichts anderes als sonst, nur anders.</short_description>
+        <description>In ihrem neuen Programm macht Annamateur nichts anderes als sonst, nur anders. Also Lieder. Und
+            Cover. Und Chaos. Sprich Kunst. Hier nun eine Kurzübersicht über das zu Erwartende: Umgeben von virtuosen
+            Musen fegt die Antidiva erneut über die Bühne. Sie tanzt. Sie schreit. Sie spontant. Sie macht Musik. Viel
+            Musik. Und Pausen. Denn Pausen sind auch Musik. Geben Sie sich Ihren Gefühlen hin. Selbst wenn Sie diese
+            nicht verstehen. Schmelzen Sie. Wie Plastik. Wenn alle mitmachen, ist das sogar sozial. Wenn keiner
+            mitmacht, stirbt ein Cis. Alles ist Kunst. Alles ist Musik. Sogar Sie. Und Anna. Und so.
+        </description>
+        <owner>
+            <firstname>Kleintheater</firstname>
+            <surname>Luzern</surname>
+            <email>kontakt@kleintheater.ch</email>
+            <number>+41412103350</number>
+        </owner>
+        <homepage>http://www.annamateur.de</homepage>
+        <type>Abendprogramm</type>
+        <picture>http://res.cloudinary.com/pixeltex/image/fetch/q_80,w_600/http%3A%2F%2Fcdn.guidle.com%2Ffiles%2Fpics%2F20151128175720370.5128582955448174.jpg</picture>
+        <timestamp>2016-03-14T09:52:32</timestamp>
+    </event>
+    <event>
+        <id>6</id>
+        <title>FC Luzern - FC Vaduz</title>
+        <date>2016-04-23</date>
+        <start_time>18:45:00</start_time>
+        <end_time>22:00:00</end_time>
+        <address>Horwerstrasse 91</address>
+        <zip>6005</zip>
+        <city>Luzern</city>
+        <location>location</location>
+        <short_description>FC Luzern Heimspiel gegen den FC Vaduz.</short_description>
+        <description>Obwohl die erste Halbzeit nicht besonders interessant war,
+            lohnte es sich für die zweite dann schon dabei zusein.
+            Leider gab es aus meiner Sicht einige Diskussionswerte Schiedsrichterentscheide und zum Schluss Schoss Lugano noch das Tor zum Unentschieden,
+            was sich für mich als FCL-Fan wie ein verlorenes Spiel anfühlte. Trotz einem Punkt und toller 2.Halbzeit vom FCL! Weiter so jung!
+        </description>
+        <owner>
+            <firstname>Swissporarena</firstname>
+            <surname>Luzern</surname>
+            <email>info@ticketcorner.ch</email>
+            <number>+41412103350</number>
+        </owner>
+        <homepage>http://www.ticketcorner.ch/tickets.html</homepage>
+        <type>Sport</type>
+        <picture>https://upload.wikimedia.org/wikipedia/en/7/71/FC-Luzern.png</picture>
+        <timestamp>2016-03-14T09:52:32</timestamp>
+    </event>
+    <event>
+        <id>7</id>
+        <title>Samstags-Brunch-Schiff</title>
+        <date>2016-04-23</date>
+        <start_time>10:30:00</start_time>
+        <end_time>12:00:00</end_time>
+        <address>Bahnhofquai</address>
+        <zip>6003</zip>
+        <city>Luzern</city>
+        <location>location</location>
+        <short_description>FC Luzern Heimspiel gegen den FC Vaduz.</short_description>
+        <description>Obwohl die erste Halbzeit nicht besonders interessant war,
+            lohnte es sich für die zweite dann schon dabei zusein.
+            Leider gab es aus meiner Sicht einige Diskussionswerte Schiedsrichterentscheide und zum Schluss Schoss Lugano noch das Tor zum Unentschieden,
+            was sich für mich als FCL-Fan wie ein verlorenes Spiel anfühlte. Trotz einem Punkt und toller 2.Halbzeit vom FCL! Weiter so jung!
+        </description>
+        <owner>
+            <firstname>Schifffahrtsgesellschaft des Vierwaldst&#xE4;ttersees</firstname>
+            <surname>(SGV)</surname>
+            <email>info@lakelucerne.ch</email>
+            <number>+41413676767</number>
+        </owner>
+        <homepage>http://www.lakelucerne.ch/</homepage>
+        <type>Kulinarisch</type>
+        <picture>http://res.cloudinary.com/pixeltex/image/fetch/q_80,w_600/http%3A%2F%2Fcdn.guidle.com%2Ffiles%2Fpics%2F20132111442428130.6100723367915837.jpg</picture>
+        <timestamp>2016-03-14T09:52:32</timestamp>
+    </event>
+    <event>
+        <id>8</id>
+        <title>Handwerksmarkt</title>
+        <date>2016-04-02</date>
+        <start_time>07:00:00</start_time>
+        <end_time>15:30:00</end_time>
+        <address>Weinmarkt</address>
+        <zip>6000</zip>
+        <city>Luzern</city>
+        <location>location</location>
+        <short_description>Luzerner Handwerksmarkt.</short_description>
+        <description>Wer sich selber mit etwas Schönem belohnen will oder noch Geschenke sucht,
+            die einmaliger, spezieller sein sollen,
+            der findet sicher das Passende am Luzerner Handwerksmarkt.
+        </description>
+        <owner>
+            <firstname>Stadt</firstname>
+            <surname>Luzern</surname>
+            <email>info@luzern.ch</email>
+            <number>+41412087802</number>
+        </owner>
+        <homepage>http://www.luzern.ch/</homepage>
+        <type>Kultur</type>
+        <picture>http://res.cloudinary.com/pixeltex/image/fetch/q_80,w_600/http%3A%2F%2Fcdn.guidle.com%2Ffiles%2Fpics%2F2016115120222740.9512949441559613.jpg</picture>
+        <timestamp>2016-03-14T09:52:32</timestamp>
+    </event>
+    <event>
+        <id>9</id>
+        <title>Ächt Lozärn</title>
+        <date>2016-04-02</date>
+        <start_time>16:00:00</start_time>
+        <end_time>18:00:00</end_time>
+        <address>Zentralstrasse 5</address>
+        <zip>6003</zip>
+        <city>Luzern</city>
+        <location>location</location>
+        <short_description>Unbekannts entdecke.</short_description>
+        <description>Themenführung für Einzelgäste: Wer in Luzern nur Kapellbrücke und Wasserturm, Museggmauer und Museen,
+            KKL Luzern und Gütsch kennt, nimmt nur einen Teil der Leuchtenstadt wahr. Die Geschichte hat uns mehr geschenkt: Edles schlummert hinter dicken Mauern.
+            Entdecken Sie das «ächte Lozärn» zwischen Paradiesgässlein und Süesswinkel, Eselstall und Zöpfli, Reusssteg und der alten Münz.
+            Ein unbekanntes Luzern erschliesst sich Ihnen. Nach Möglichkeit besichtigen Sie ein Luzerner Bürgerhaus.
+        </description>
+        <owner>
+            <firstname>Luzern Tourismus</firstname>
+            <surname>AG</surname>
+            <email>luzern@luzern.ch</email>
+            <number>+41412271717</number>
+        </owner>
+        <homepage>http://www.luzern.ch/de</homepage>
+        <type>Kultur</type>
+        <picture>http://res.cloudinary.com/pixeltex/image/fetch/q_80,w_600/http%3A%2F%2Fcdn.guidle.com%2Ffiles%2Fpics%2F2013151029226340.9530362946295426.jpg</picture>
+        <timestamp>2016-03-14T09:52:32</timestamp>
     </event>
 </adnature_events>
