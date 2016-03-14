@@ -192,11 +192,11 @@ if (isset($_GET['deleted'])) {
 }
 
 if (isset($_GET['thrown'])) {
-    $thrownData = unserialize($_COOKIE['planer']);
+    $thrownData = unserialize($_COOKIE['thrown']);
     $thrownID = $_GET['thrown'];
     if (!in_array($thrownID, $thrownData)) {
         array_push($thrownData, $thrownID);
-        setcookie("planer", serialize($thrownData), time() + 3600);
+        setcookie("thrown", serialize($thrownData), time() + 3600);
     }
 }
 
@@ -214,7 +214,7 @@ foreach ($data as $value) {
 
 if (!empty($data)) {
     foreach ($thrownData as $thrown) {
-        $thrownEvent = $xmlDoc->xpath("//ad:event[ad:id=$value]")[0];
+        $thrownEvent = $xmlDoc->xpath("//ad:event[ad:id=$thrown]")[0];
         array_push($thrownEvents, $thrownEvent);
     }
     $match = calcMatch($events, $chosenEvents, $thrownEvents);
