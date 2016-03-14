@@ -222,7 +222,6 @@ if (!empty($data)) {
         $adnature_events = addEventToXmlDoc($match, $adnature_events, "match");
     }
     $adnature_events = addIdStringToXml(getIdString($chosenEvents), $adnature_events);
-    print_r($adnature_events);
 } else {
     $match = matchNextDay($events);
     if(!empty($match)) {

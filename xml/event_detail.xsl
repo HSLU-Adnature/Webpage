@@ -21,7 +21,7 @@
                                     <a href="../php/index.php">Events</a>
                                 </li>
                                 <li>
-                                    <a href="../html/planer.html">Planer</a>
+                                    <a href="../php/planer.php">Planer</a>
                                 </li>
                             </ul>
                         </div>

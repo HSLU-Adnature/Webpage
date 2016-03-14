@@ -1,3 +1,13 @@
 .border-right {
     border-right: 3px solid black;
 }
+
+.planerRow {
+    padding-top: 35px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.background-color {
+    background-color: #fafafa;
+}
