@@ -124,6 +124,17 @@ function calcMatch ($events, $chosenEvents, $thrownEvents){
     return calcNearest($possibleEvents, $chosenEvents);
 }
 
+function matchNextDay($events){
+    $tomorrow = new DateTime('tomorrow');
+    $match = null;
+    foreach($events as $event){
+        if(new DateTime($event->date) > $tomorrow && $match == null){
+            $match = $event;
+        }
+    }
+    return $match;
+}
+
 
 $data = array();
 $thrownData = array();
@@ -172,28 +183,26 @@ $thrownEvents = array();
 
 $adnature_events = $xmlEmpty->xpath("//ad:adnature_events")[0];
 
-if (!empty($data)) {
-    foreach ($data as $value) {
-        $chosenEvent = $xmlDoc->xpath("//ad:event[ad:id=$value]")[0];
-        array_push($chosenEvents, $chosenEvent);
-    }
+foreach ($data as $value) {
+    $chosenEvent = $xmlDoc->xpath("//ad:event[ad:id=$value]")[0];
+    array_push($chosenEvents, $chosenEvent);
+    $adnature_events = addEventToXmlDoc($chosenEvent, $adnature_events, "chosen");
+}
 
+if (!empty($data)) {
     foreach ($thrownData as $thrown) {
         $thrownEvent = $xmlDoc->xpath("//ad:event[ad:id=$value]")[0];
         array_push($thrownEvents, $thrownEvent);
     }
-
     $match = calcMatch($events, $chosenEvents, $thrownEvents);
-
-    $adnature_events = $xmlEmpty->xpath("//ad:adnature_events")[0];
     if(!empty($match)) {
         $adnature_events = addEventToXmlDoc($match, $adnature_events, "match");
     }
-    foreach ($chosenEvents as $chosenEvent) {
-        $adnature_events = addEventToXmlDoc($chosenEvent, $adnature_events, "chosen");
+} else {
+    $match = matchNextDay($events);
+    if(!empty($match)) {
+        $adnature_events = addEventToXmlDoc($match, $adnature_events, "match");
     }
-
-
 }
 
 $xslDoc = new DOMDocument();
