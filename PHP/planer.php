@@ -135,6 +135,20 @@ function matchNextDay($events){
     return $match;
 }
 
+function getIdString($events){
+    $list = "";
+    foreach($events as $event){
+        $list .= $event->id . ",";
+    }
+    return rtrim($list, ",");
+}
+
+function addIdStringToXml($string, $xmlDoc){
+    $idList = $xmlDoc->addChild("idList");
+    $idList->addChild("list", $string);
+    return $xmlDoc;
+}
+
 
 $data = array();
 $thrownData = array();
@@ -207,6 +221,7 @@ if (!empty($data)) {
     if(!empty($match)) {
         $adnature_events = addEventToXmlDoc($match, $adnature_events, "match");
     }
+    $adnature_events = addIdStringToXml(getIdString($chosenEvents), $adnature_events);
 } else {
     $match = matchNextDay($events);
     if(!empty($match)) {
