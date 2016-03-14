@@ -177,6 +177,15 @@ if (isset($_GET['deleted'])) {
     }
 }
 
+if (isset($_GET['thrown'])) {
+    $thrownData = unserialize($_COOKIE['planer']);
+    $thrownID = $_GET['thrown'];
+    if (!in_array($thrownID, $thrownData)) {
+        array_push($thrownData, $thrownID);
+        setcookie("planer", serialize($thrownData), time() + 3600);
+    }
+}
+
 $events = $xmlDoc->xpath("//ad:event");
 $chosenEvents = array();
 $thrownEvents = array();
