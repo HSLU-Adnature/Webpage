@@ -6,6 +6,7 @@
                 <meta charset="UTF-8"/>
                 <title>Little Adnature</title>
                 <link rel="stylesheet" href="../css/bootstrap-yeti.min.css"/>
+                <link rel="stylesheet" href="../css/planer.css"/>
                 <link rel="shortcut icon" href="../pics/favicon.ico" type="image/x-icon"/>
                 <link rel="icon" href="../pics/favicon.ico" type="image/x-icon"/>
             </head>
@@ -40,7 +41,7 @@
     <xsl:template match="ad:event">
         <div class="container">
             <xsl:attribute name="onclick">location.href='detail.php?id=<xsl:value-of select="ad:id"/>'</xsl:attribute>
-            <div class="jumbotron">
+            <div class="jumbotron clickable">
                 <div class="row">
                     <div class="col-md-6 col-xs-6 col-lg-6 col-sm-6">
                         <h2><xsl:value-of select="ad:title"/></h2>

@@ -18,3 +18,8 @@
     padding-left: 50%;
     padding-top: 15px;
 }
+
+.clickable:hover {
+    border: 1px solid;
+    border-color: #2ea443;
+}
