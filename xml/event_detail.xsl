@@ -32,6 +32,9 @@
                         <xsl:apply-templates></xsl:apply-templates>
                     </div>
                 </div>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtxiB_gzEsuW95lH1xY5zo3Nre1XKhQUE">
+                    &#160;</script>
+                <script src="../JS/planer.js">&#160;</script>
             </body>
         </html>
     </xsl:template>
@@ -41,6 +44,9 @@
                 <h1>
                     <xsl:value-of select="ad:title"/>
                 </h1>
+                <div id="mapInfos" style="visibility: hidden">
+                    <xsl:value-of select="ad:id"/>
+                </div>
             </div>
         </div>
         <div class="container">
@@ -57,10 +63,9 @@
                             margin-left:10em;
                             }
                         </style>
-                        <div>
-                            <div class="left_column">Wann:</div>
-                            <div class="right_column">
-                                <xsl:apply-templates select="ad:date"/>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h2 class="panel-title"><xsl:apply-templates select="ad:date"/></h2>
                             </div>
                         </div>
                         <div>
@@ -77,12 +82,6 @@
                             </div>
                         </div>
                         <br/>
-                        <div>
-                            <div class="left_column">Location:</div>
-                            <div class="right_column">
-                                <xsl:value-of select="ad:location"/>
-                            </div>
-                        </div>
                         <div>
                             <div class="left_column">Homepage:</div>
                             <div class="right_column">
@@ -113,6 +112,7 @@
                 <xsl:apply-templates select="ad:owner">
                     <xsl:sort select="ad:firstname"/>
                 </xsl:apply-templates>
+                <div id="map" class="container" style="height: 500px"/>
             </div>
         </div>
     </xsl:template>
