@@ -21,10 +21,7 @@ if ($xml->schemaValidate("../xml/core.xsd")) {
     $serviceClient = new FOPServiceClient();
     $pdfFile = $serviceClient->processFile($output_fo);
 
-    echo "<h1>FOP Service Client</h1>";
-    echo "<p>Successfully rendered FO File<br/><strong>";
-    echo sprintf('<p>Generated PDF:<br><strong><a href="%s">%s</a></strong></p>', $pdfFile, $pdfFile);
-
+    header("Refresh:0; url=" . $pdfFile);
 
 } else {
     echo "XML not valid!";
