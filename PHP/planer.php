@@ -132,7 +132,7 @@ if (isset($_GET['chosen'])) {
     $data = unserialize($_COOKIE['planer']);
     $chosenID = $_GET['chosen'];
     if (!in_array($chosenID, $data)) {
-        array_push($data, $_GET['chosen']);
+        array_push($data, $chosenID);
         setcookie("planer", serialize($data), time() + 3600);
     }
 }
@@ -172,7 +172,3 @@ if (!empty($data)) {
     $proc->importStylesheet($xslDoc);
     echo $proc->transformToXML($adnature_events);
 }
-
-
-
-
