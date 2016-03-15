@@ -35,6 +35,7 @@ foreach($eventIds as $id){
     $eventGeoLocation = $eventGeo->addChild("location");
     $eventGeoLocation->addChild("lat", $eventLocation->lat);
     $eventGeoLocation->addChild("lng", $eventLocation->lng);
+    $eventGeo->addChild("title", $event->title);
 }
 header('Content-Type: application/xml');
 echo $xmlGeoMarks->asXML();

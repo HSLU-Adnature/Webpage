@@ -20,7 +20,8 @@ function drawMap(xmlEvents){
         };
         var marker = new google.maps.Marker({
             position: position,
-            map: map
+            map: map,
+            title: events[i].childNodes[2].textContent
         });
     }
 
