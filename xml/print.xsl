@@ -17,7 +17,8 @@
             <fo:page-sequence master-reference="event_print">
                 <fo:static-content flow-name="xsl-region-before">
                     <fo:block text-align="right">
-                        <fo:external-graphic src="http://taxml.enterpriselab.ch/team04/pics/logo.png" border-width="0cm" content-height="scale-to-fit" content-width="3cm"  scaling="uniform"/>
+                        <fo:external-graphic src="http://taxml.enterpriselab.ch/team04/pics/logo.png" border-width="0cm"
+                                             content-height="scale-to-fit" content-width="3cm" scaling="uniform"/>
                     </fo:block>
                     <fo:block font-size="19pt" font-family="sans-serif" line-height="24pt" space-after.optimum="20pt"
                               background-color="green" color="white" text-align="center" padding-top="5pt"
@@ -48,41 +49,62 @@
             </fo:block>
 
             <fo:block>
-                <fo:table space-after.optimum="5pt" width="5cm" font-size="11pt">
+                <fo:table space-after.optimum="5pt" width="20cm" font-size="11pt">
                     <fo:table-body>
                         <fo:table-row>
                             <fo:table-cell>
                                 <fo:block>
-                                    Datum:
+                                    <fo:table space-after.optimum="5pt" width="5cm" font-size="11pt">
+                                        <fo:table-body>
+                                            <fo:table-row>
+                                                <fo:table-cell>
+                                                    <fo:block>
+                                                        Datum:
+                                                    </fo:block>
+                                                </fo:table-cell>
+                                                <fo:table-cell>
+                                                    <fo:block>
+                                                        <xsl:value-of select="ad:date"/>
+                                                    </fo:block>
+                                                </fo:table-cell>
+                                            </fo:table-row>
+                                            <fo:table-row>
+                                                <fo:table-cell>
+                                                    <fo:block>
+                                                        Start:
+                                                    </fo:block>
+                                                </fo:table-cell>
+                                                <fo:table-cell>
+                                                    <fo:block>
+                                                        <xsl:value-of select="ad:start_time"/>
+                                                    </fo:block>
+                                                </fo:table-cell>
+                                            </fo:table-row>
+                                            <fo:table-row>
+                                                <fo:table-cell>
+                                                    <fo:block>
+                                                        Ende:
+                                                    </fo:block>
+                                                </fo:table-cell>
+                                                <fo:table-cell>
+                                                    <fo:block>
+                                                        <xsl:value-of select="ad:end_time"/>
+                                                    </fo:block>
+                                                </fo:table-cell>
+                                            </fo:table-row>
+                                        </fo:table-body>
+                                    </fo:table>
                                 </fo:block>
                             </fo:table-cell>
-                            <fo:table-cell>
+                            <fo:table-cell text-align="center">
                                 <fo:block>
-                                    <xsl:value-of select="ad:date"/>
-                                </fo:block>
-                            </fo:table-cell>
-                        </fo:table-row>
-                        <fo:table-row>
-                            <fo:table-cell>
-                                <fo:block>
-                                    Start:
-                                </fo:block>
-                            </fo:table-cell>
-                            <fo:table-cell>
-                                <fo:block>
-                                    <xsl:value-of select="ad:start_time"/>
-                                </fo:block>
-                            </fo:table-cell>
-                        </fo:table-row>
-                        <fo:table-row>
-                            <fo:table-cell>
-                                <fo:block>
-                                    Ende:
-                                </fo:block>
-                            </fo:table-cell>
-                            <fo:table-cell>
-                                <fo:block>
-                                    <xsl:value-of select="ad:end_time"/>
+                                    <fo:external-graphic
+                                            border-width="0cm"
+                                            content-height="scale-to-fit" content-width="7cm"
+                                            scaling="uniform">
+                                        <xsl:attribute name="src"><xsl:value-of select="ad:picture"/>
+                                        </xsl:attribute>
+                                    </fo:external-graphic>
                                 </fo:block>
                             </fo:table-cell>
                         </fo:table-row>
