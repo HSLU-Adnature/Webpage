@@ -212,17 +212,20 @@ foreach ($data as $value) {
     $adnature_events = addEventToXmlDoc($chosenEvent, $adnature_events, "chosen");
 }
 
+foreach ($thrownData as $thrown) {
+    $thrownEvent = $xmlDoc->xpath("//ad:event[ad:id=$thrown]")[0];
+    array_push($thrownEvents, $thrownEvent);
+}
+
 if (!empty($data)) {
-    foreach ($thrownData as $thrown) {
-        $thrownEvent = $xmlDoc->xpath("//ad:event[ad:id=$thrown]")[0];
-        array_push($thrownEvents, $thrownEvent);
-    }
+
     $match = calcMatch($events, $chosenEvents, $thrownEvents);
     if(!empty($match)) {
         $adnature_events = addEventToXmlDoc($match, $adnature_events, "match");
     }
     $adnature_events = addIdStringToXml(getIdString($chosenEvents), $adnature_events);
 } else {
+    $events = arrayRecursiveDiff($events, $thrownEvents);
     $match = matchNextDay($events);
     if(!empty($match)) {
         $adnature_events = addEventToXmlDoc($match, $adnature_events, "match");
