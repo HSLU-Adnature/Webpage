@@ -3,249 +3,227 @@
                  xsi:schemaLocation="http://www.adnature.ch/core core.xsd" year="2016">
     <event>
         <id>1</id>
-        <title>Cinédîner</title>
+        <title>Fackellauf</title>
         <date>2016-04-16</date>
         <start_time>18:15:00</start_time>
         <end_time>23:00:00</end_time>
-        <address>Haldenstrasse 4</address>
-        <zip>6006</zip>
-        <city>Luzern</city>
+        <address>Frutt 9</address>
+        <zip>6068</zip>
+        <city>Melchsee-Frutt</city>
         <location>location</location>
-        <short_description>6. Luzerner Cinédîner</short_description>
-        <description>Erleben Sie den Kultevent mit Freunden das einzigartige Kinovergnügen. Nach dem Welcome-Apéro und dem genussreichen 3-Gang-Menu, natürlich passend zum Film, führen wir in der historischen Halle des 1871 grosses Kino vor...
-
-            Ab 18.15 -19.00 Apéro
-            19.00 Begrüssung und Vorspeise
-            19.45 - 20.25 Start Film Teil 1
-            20.30 Hauptgang
-            21.10 Film Teil 2
-            ca. 22.35 Dessert, Kaffee und Ausklang
+        <short_description>Spannender Fackellauf für die ganze Familie!</short_description>
+        <description>Start ist am Hotel Frutt Lodge und Spa. Der Weg führt uns durch das winterliche Melchsee-Frutt im schönen Kanton Obwalden.
+        Im Wald wird es dann für die einen romantisch oder aber gespenstisch. Ein grosser Spass für alt und jung.
         </description>
         <owner>
-            <firstname>Restaurant</firstname>
-            <surname>1871</surname>
-            <email>restaurant@1871.ch</email>
-            <number>+41414221871</number>
+            <firstname>Hotel Frutt Lodge und Spa</firstname>
+            <surname></surname>
+            <email>info@fruttlodge.ch</email>
+            <number>+41416697979</number>
         </owner>
-        <homepage>http://www.1871.ch/cinediner</homepage>
+        <homepage>http://www.fruttlodge.ch/</homepage>
         <type>Abendprogramm</type>
-        <picture>http://res.cloudinary.com/pixeltex/image/fetch/q_80,w_600/http%3A%2F%2Fcdn.guidle.com%2Ffiles%2Fpics%2F2014071021347800.5117764526496885.jpg</picture>
+        <picture>https://image.freepik.com/fotos-kostenlos/fackel_2953228.jpg</picture>
         <timestamp>2016-02-20T09:00:00</timestamp>
     </event>
     <event>
         <id>2</id>
-        <title>Stadtführung Luzern</title>
+        <title>Morgen Fitness</title>
         <date>2016-04-09</date>
         <start_time>09:45:00</start_time>
         <end_time>11:45:00</end_time>
-        <address>Zentralstrasse 5</address>
-        <zip>6003</zip>
-        <city>Luzern</city>
+        <address>Engelsburg 3</address>
+        <zip>6068</zip>
+        <city>Melchsee-Frutt</city>
         <location>location</location>
-        <short_description>Besuchen Sie mit uns die weltberühmten Sehenswürdigkeiten.</short_description>
-        <description>Besuchen Sie mit uns die weltberühmten Sehenswürdigkeiten wie die Kapellbrücke mit dem achteckigen Wasserturm, die Jesuitenkirche und das KKL Luzern und erfahren Sie Wichtiges und Witziges über die Geschichte und den Alltag der Luzerner.
-            Sie entdecken versteckte Gassen, belebte Plätze und erhaschen einen Blick auf die Krone der Stadt, die Museggmauer. Altbekanntes und viel Neues – Luzern freut sich auf Sie!
+        <short_description>Morgen Muffel werden wach.</short_description>
+        <description>Haben Sie es schwer am Morgen in Gang zu kommen? Besuchen Sie unser Fitnessprogramm am Morgen.
+            Die Übungen sind leicht und machen fröhlich. Aufwachen und Spass ist im Training inbegriffen.
         </description>
         <owner>
-            <firstname>Luzern Tourismus</firstname>
-            <surname>AG</surname>
-            <email>luzern@luzern.com</email>
-            <number>+41412271717</number>
+            <firstname>Sabine</firstname>
+            <surname>Hauri</surname>
+            <email>fitness@hauri.com</email>
+            <number>+41412271617</number>
         </owner>
-        <homepage>http://www.luzern.com/de/index.cfm</homepage>
-        <type>Kultur</type>
-        <picture>http://res.cloudinary.com/pixeltex/image/fetch/q_80,w_600/http%3A%2F%2Fcdn.guidle.com%2Ffiles%2Fpics%2F2016112932148040.03960043052211404.jpg</picture>
+        <homepage>http://dynamis-fitness.ch</homepage>
+        <type>Sport</type>
+        <picture>http://static1.verbinet.com/image_uploader/photos/6f/large/yoga-01.jpg</picture>
         <timestamp>2016-02-20T09:00:00</timestamp>
     </event>
     <event>
         <id>3</id>
-        <title>goactive</title>
+        <title>Skiweitgleiten</title>
         <date>2016-04-16</date>
         <start_time>12:00:00</start_time>
         <end_time>17:00:00</end_time>
         <address>Horwerstrasse 87</address>
-        <zip>6000</zip>
-        <city>Luzern</city>
+        <zip>6068</zip>
+        <city>Melchsee-Frutt</city>
         <location>location</location>
-        <short_description>Die goactive ist eine erlebnisorientierte Publikumsmesse rund um Fitness, Sport und Wellness.</short_description>
-        <description>Die goactive ist eine erlebnisorientierte Publikumsmesse rund um Fitness, Sport und Wellness.
-            Interessierte MessebesucherInnnen haben die Möglichkeit, diverse Sportarten wie In- und Outdoortrends, Ausdauer- und Kraftsport, Ballsport, Bewegung/Sport ab 50+ kennenzulernen und auszuprobieren. Im Mittelpunkt der Messe stehen Themen rund um:
-
-            Fitness
-            Sport
-            Wellness
-            Schwerpunktthemen
+        <short_description>Dem Schnee trotzen und auf dem Wasser eine gute Figur abgeben.</short_description>
+        <description>
+            Im letzten Jahr verblüfften viele neue Talente was in Ihnen steckte. Dieses Jahr wird der neu Skigleitkönig gesucht. Spassfaktor hoch 10.
+            Unterstützt von dem besten Publikum wird es auch dieses Jahr ein spitzen Event.
         </description>
         <owner>
-            <firstname>goactive</firstname>
-            <surname></surname>
-            <email>info@goactive-messe.ch</email>
-            <number>+41418701734</number>
+            <firstname>Sportbahnen</firstname>
+            <surname>Melchsee-Frutt</surname>
+            <email>info@melchsee-frutt.ch</email>
+            <number>+41416697060</number>
         </owner>
-        <homepage>http://www.goactive-messe.ch/</homepage>
+        <homepage>http://www.melchsee-frutt.ch/</homepage>
         <type>Sport</type>
-        <picture>http://res.cloudinary.com/pixeltex/image/fetch/q_80,w_600/http%3A%2F%2Fcdn.guidle.com%2Ffiles%2Fpics%2F20157241443149640.3028091039055894.png</picture>
+        <picture>http://www.mustdocanada.com/wp-content/uploads/2013/05/SLUSH2.jpg</picture>
         <timestamp>2016-02-20T09:00:00</timestamp>
     </event>
     <event>
         <id>4</id>
-        <title>Mittagsschiff</title>
+        <title>Winter Apero</title>
         <date>2016-04-09</date>
         <start_time>12:00:00</start_time>
         <end_time>13:47:00</end_time>
-        <address>Bahnhofquai</address>
-        <zip>6003</zip>
-        <city>Luzern</city>
+        <address>Tannalpstrasse 3</address>
+        <zip>6068</zip>
+        <city>Melchsee-Frutt</city>
         <location>location</location>
-        <short_description>Mittagspause verfeinern.</short_description>
-        <description>Auf der Rundfahrt nach Vitznau kommen Sie in den Genuss eines saisonalen Salat- und Suppenbuffets
-            sowie von wechselnden Fleisch-, Fisch- und vegetarischen Spezialit&#xE4;ten.&#xD;
-            &#xD;
-            Tischreservationen bis 11 Uhr
+        <short_description>Apero direkt am See.</short_description>
+        <description>Feinschmecker kommen hier voll auf Ihre Kosten. Feinste Schweizer und Ausländische Spezialitäten überraschen die Gäste.
+            Immer gut für den kleinen Hunger.
         </description>
         <owner>
-            <firstname>Schifffahrtsgesellschaft des Vierwaldst&#xE4;ttersees</firstname>
-            <surname>(SGV)</surname>
-            <email>info@lakelucerne.ch</email>
-            <number>+41413676767</number>
+            <firstname>Hotel</firstname>
+            <surname>Alpina</surname>
+            <email>info@hotel-alpina.ch</email>
+            <number>+41416697060</number>
         </owner>
-        <homepage>http://www.lakelucerne.ch/</homepage>
+        <homepage>http://www.melchsee-frutt.ch/</homepage>
         <type>Kulinarisch</type>
-        <picture>http://res.cloudinary.com/pixeltex/image/fetch/q_80,w_600/http%3A%2F%2Fcdn.guidle.com%2Ffiles%2Fpics%2F2013211159431360.19424737373265832.jpg</picture>
+        <picture>https://www.bls.ch/images/content/schifffahrt/charter-apero1.jpg</picture>
         <timestamp>2016-03-14T09:52:32</timestamp>
     </event>
     <event>
         <id>5</id>
-        <title>Annamateur and the Beuys</title>
+        <title>Schlittschuhlaufen bei Nacht</title>
         <date>2016-04-09</date>
         <start_time>20:00:00</start_time>
         <end_time>23:00:00</end_time>
-        <address>Bundesplatz 14</address>
-        <zip>6003</zip>
-        <city>Luzern</city>
+        <address>Frutt 8</address>
+        <zip>6068</zip>
+        <city>Melchsee-Frutt</city>
         <location>location</location>
-        <short_description>In ihrem neuen Programm macht Annamateur nichts anderes als sonst, nur anders.</short_description>
-        <description>In ihrem neuen Programm macht Annamateur nichts anderes als sonst, nur anders. Also Lieder. Und
-            Cover. Und Chaos. Sprich Kunst. Hier nun eine Kurzübersicht über das zu Erwartende: Umgeben von virtuosen
-            Musen fegt die Antidiva erneut über die Bühne. Sie tanzt. Sie schreit. Sie spontant. Sie macht Musik. Viel
-            Musik. Und Pausen. Denn Pausen sind auch Musik. Geben Sie sich Ihren Gefühlen hin. Selbst wenn Sie diese
-            nicht verstehen. Schmelzen Sie. Wie Plastik. Wenn alle mitmachen, ist das sogar sozial. Wenn keiner
-            mitmacht, stirbt ein Cis. Alles ist Kunst. Alles ist Musik. Sogar Sie. Und Anna. Und so.
+        <short_description>Schlittschuh laufen bei nächtlicher Stimmung.</short_description>
+        <description>Nächtliches Schlittschuhlaufen mit tollen Ambiente. Für die ganze Familie ein Vergnügen.
         </description>
         <owner>
-            <firstname>Kleintheater</firstname>
-            <surname>Luzern</surname>
-            <email>kontakt@kleintheater.ch</email>
-            <number>+41412103350</number>
+            <firstname>Hotel</firstname>
+            <surname>Gemsy</surname>
+            <email>info@melchsee-frutt.ch</email>
+            <number>+41416697060</number>
         </owner>
-        <homepage>http://www.annamateur.de</homepage>
+        <homepage>http://www.melchsee-frutt.ch/</homepage>
         <type>Abendprogramm</type>
-        <picture>http://res.cloudinary.com/pixeltex/image/fetch/q_80,w_600/http%3A%2F%2Fcdn.guidle.com%2Ffiles%2Fpics%2F20151128175720370.5128582955448174.jpg</picture>
+        <picture>http://images.pxlpartner.ch.s3.amazonaws.com/n28450/images/detailluzernbig/hermitage_xmas.jpg</picture>
         <timestamp>2016-03-14T09:52:32</timestamp>
     </event>
     <event>
         <id>6</id>
-        <title>FC Luzern - FC Vaduz</title>
+        <title>Après-Ski Party</title>
         <date>2016-04-23</date>
         <start_time>18:45:00</start_time>
-        <end_time>22:00:00</end_time>
-        <address>Horwerstrasse 91</address>
-        <zip>6005</zip>
-        <city>Luzern</city>
+        <end_time>23:00:00</end_time>
+        <address>Engelsburg 18</address>
+        <zip>6068</zip>
+        <city>Melchsee-Frutt</city>
         <location>location</location>
-        <short_description>FC Luzern Heimspiel gegen den FC Vaduz.</short_description>
-        <description>Obwohl die erste Halbzeit nicht besonders interessant war,
-            lohnte es sich für die zweite dann schon dabei zusein.
-            Leider gab es aus meiner Sicht einige Diskussionswerte Schiedsrichterentscheide und zum Schluss Schoss Lugano noch das Tor zum Unentschieden,
-            was sich für mich als FCL-Fan wie ein verlorenes Spiel anfühlte. Trotz einem Punkt und toller 2.Halbzeit vom FCL! Weiter so jung!
+        <short_description>Après-Ski - Drinks - Hits</short_description>
+        <description>Die beste Après-Ski Party der Schweiz. Mit vielen DJs und DJanes. Feierfröhliche Skifahrer und Snowboarder können sich nach dem Skifahren mal so richtig austoben.
         </description>
         <owner>
-            <firstname>Swissporarena</firstname>
-            <surname>Luzern</surname>
-            <email>info@ticketcorner.ch</email>
-            <number>+41412103350</number>
+            <firstname>Hotel</firstname>
+            <surname>Glogghuis</surname>
+            <email>info@melchsee-frutt.ch</email>
+            <number>+41416697060</number>
         </owner>
-        <homepage>http://www.ticketcorner.ch/tickets.html</homepage>
-        <type>Sport</type>
-        <picture>https://upload.wikimedia.org/wikipedia/en/7/71/FC-Luzern.png</picture>
+        <homepage>http://www.melchsee-frutt.ch/</homepage>
+        <type>Party</type>
+        <picture>https://www.obertauern.com/fileadmin/_processed_/csm_apres_ski_obertauern4_5fb2ed04c8.jpg</picture>
         <timestamp>2016-03-14T09:52:32</timestamp>
     </event>
     <event>
         <id>7</id>
-        <title>Samstags-Brunch-Schiff</title>
+        <title>Winterwanderung</title>
         <date>2016-04-23</date>
-        <start_time>10:30:00</start_time>
+        <start_time>08:30:00</start_time>
         <end_time>12:00:00</end_time>
-        <address>Bahnhofquai</address>
-        <zip>6003</zip>
-        <city>Luzern</city>
+        <address>Untere Frutt 5</address>
+        <zip>6068</zip>
+        <city>Melchsee-Frutt</city>
         <location>location</location>
-        <short_description>Mehr Zeit zum geniessen.</short_description>
-        <description>Mehr Zeit zum geniessen.
-            Lassen Sie sich auf der Fahrt von einem vielseitigen Brunchbuffet verwöhnen. Kinderbetreuung an Bord ist inklusive.
+        <short_description>Melchsee-Frutt bis Tannalp.</short_description>
+        <description>Wandern durch die schönste Winterlandschaft Obwaldens. Naturfans kommen voll auf Ihre Kosten.
+            Dabei ist auch für das leibliche Wohl gesorgt. Gepäck und schwere Ausrüstung Fehlanzeige.
         </description>
         <owner>
-            <firstname>Schifffahrtsgesellschaft des Vierwaldst&#xE4;ttersees</firstname>
-            <surname>(SGV)</surname>
-            <email>info@lakelucerne.ch</email>
-            <number>+41413676767</number>
+            <firstname>Sportbahnen</firstname>
+            <surname>Melchsee-Frutt</surname>
+            <email>info@melchsee-frutt.ch</email>
+            <number>+41416697060</number>
         </owner>
-        <homepage>http://www.lakelucerne.ch/</homepage>
-        <type>Kulinarisch</type>
-        <picture>http://res.cloudinary.com/pixeltex/image/fetch/q_80,w_600/http%3A%2F%2Fcdn.guidle.com%2Ffiles%2Fpics%2F20132111442428130.6100723367915837.jpg</picture>
+        <homepage>http://www.melchsee-frutt.ch/</homepage>
+        <type>Bewegung</type>
+        <picture>http://images.pxlpartner.ch.s3.amazonaws.com/n61665/images/detailluzernbig/rp_winterwandern_scheidegg_wi.jpg</picture>
         <timestamp>2016-03-14T09:52:32</timestamp>
     </event>
     <event>
         <id>8</id>
-        <title>Handwerksmarkt</title>
+        <title>Das Geheimnis des Iglubaus</title>
         <date>2016-04-02</date>
         <start_time>07:00:00</start_time>
         <end_time>15:30:00</end_time>
-        <address>Weinmarkt</address>
-        <zip>6000</zip>
-        <city>Luzern</city>
+        <address>Schalegg</address>
+        <zip>6068</zip>
+        <city>Melchsee-Frutt</city>
         <location>location</location>
-        <short_description>Luzerner Handwerksmarkt.</short_description>
-        <description>Wer sich selber mit etwas Schönem belohnen will oder noch Geschenke sucht,
-            die einmaliger, spezieller sein sollen,
-            der findet sicher das Passende am Luzerner Handwerksmarkt.
+        <short_description>Ein Iglu mit den eigenen Händen bauen.</short_description>
+        <description>Wer wollte das nicht schon immer. Einmal ein Iglu bauen. Unter professioneller Anleitung wird Schritt für Schritt ein Iglu gebaut.
+            Inklusive Mittagessen ist es ein Event für den ganzen Tag. Doch die Mühe lohnt sich. Anschliessend haben Sie die Möglichkeit die Nacht darin zu verbringen.
         </description>
         <owner>
-            <firstname>Stadt</firstname>
-            <surname>Luzern</surname>
-            <email>info@luzern.ch</email>
-            <number>+41412087802</number>
+            <firstname>Sportbahnen</firstname>
+            <surname>Melchsee-Frutt</surname>
+            <email>info@melchsee-frutt.ch</email>
+            <number>+41416697060</number>
         </owner>
-        <homepage>http://www.luzern.ch/</homepage>
+        <homepage>http://www.melchsee-frutt.ch/</homepage>
         <type>Kultur</type>
-        <picture>http://res.cloudinary.com/pixeltex/image/fetch/q_80,w_600/http%3A%2F%2Fcdn.guidle.com%2Ffiles%2Fpics%2F2016115120222740.9512949441559613.jpg</picture>
+        <picture>https://www.mycard.ch/MyCard/media/mycard/artikel/2016/1602_Feb/160208_Iglu_11.jpg?ext=.jpg</picture>
         <timestamp>2016-03-14T09:52:32</timestamp>
     </event>
     <event>
         <id>9</id>
-        <title>Ächt Lozärn</title>
+        <title>Eisstockschiessen</title>
         <date>2016-04-02</date>
         <start_time>16:00:00</start_time>
         <end_time>18:00:00</end_time>
-        <address>Zentralstrasse 5</address>
-        <zip>6003</zip>
-        <city>Luzern</city>
+        <address>Tannalpstrasse 4</address>
+        <zip>6068</zip>
+        <city>Melchsee-Frutt</city>
         <location>location</location>
-        <short_description>Unbekannts entdecke.</short_description>
-        <description>Themenführung für Einzelgäste: Wer in Luzern nur Kapellbrücke und Wasserturm, Museggmauer und Museen,
-            KKL Luzern und Gütsch kennt, nimmt nur einen Teil der Leuchtenstadt wahr. Die Geschichte hat uns mehr geschenkt: Edles schlummert hinter dicken Mauern.
-            Entdecken Sie das «ächte Lozärn» zwischen Paradiesgässlein und Süesswinkel, Eselstall und Zöpfli, Reusssteg und der alten Münz.
-            Ein unbekanntes Luzern erschliesst sich Ihnen. Nach Möglichkeit besichtigen Sie ein Luzerner Bürgerhaus.
+        <short_description>Eisstockschiessen auf dem zugefrorenen See.</short_description>
+        <description>Für Familien, Vereine und Firmenanlässe der Riesenspass!
+            Vorallem das Eisstockspielen ist rasch gelernt und sorgt für Spannung. Lassen Sie sich vom Eismeisterdas Material und die Schussabgabe erklären.
+            Für Kinder sollten Sie darauf achten, dass es Eisstöcke mit gelber oder güner Unterfläche dabei hat. Diese rutschen besser!
         </description>
         <owner>
-            <firstname>Luzern Tourismus</firstname>
-            <surname>AG</surname>
-            <email>luzern@luzern.ch</email>
-            <number>+41412271717</number>
+            <firstname>Sportbahnen</firstname>
+            <surname>Melchsee-Frutt</surname>
+            <email>info@melchsee-frutt.ch</email>
+            <number>+41416697060</number>
         </owner>
-        <homepage>http://www.luzern.ch/de</homepage>
-        <type>Kultur</type>
-        <picture>http://res.cloudinary.com/pixeltex/image/fetch/q_80,w_600/http%3A%2F%2Fcdn.guidle.com%2Ffiles%2Fpics%2F2013151029226340.9530362946295426.jpg</picture>
+        <homepage>http://www.melchsee-frutt.ch/</homepage>
+        <type>Sport</type>
+        <picture>http://www.unterhof.at/assets/images/eisstockschiessen-filzmoos.jpg</picture>
         <timestamp>2016-03-14T09:52:32</timestamp>
     </event>
 </adnature_events>
