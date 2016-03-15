@@ -41,8 +41,13 @@
             </fo:page-sequence>
         </fo:root>
     </xsl:template>
-    <xsl:template match="ad:adnature_events/ad:event">
-        <fo:block text-align="left" font-size="8pt" margin-top="20pt">
+    <xsl:template match="ad:adnature_events">
+        <xsl:apply-templates>
+            <xsl:sort select="ad:start_time"/>
+        </xsl:apply-templates>
+    </xsl:template>
+    <xsl:template match="ad:event">
+        <fo:block text-align="left" font-size="8pt" margin-top="50pt">
             <fo:block font-size="16pt">
                 <xsl:value-of select="ad:title"/>
             </fo:block>
@@ -63,7 +68,8 @@
                                                 </fo:table-cell>
                                                 <fo:table-cell>
                                                     <fo:block>
-                                                        <xsl:value-of select="concat(substring(ad:date,9,2),'.', substring(ad:date,6,2),'.',substring(ad:date,1,4))"/>
+                                                        <xsl:value-of
+                                                                select="concat(substring(ad:date,9,2),'.', substring(ad:date,6,2),'.',substring(ad:date,1,4))"/>
                                                     </fo:block>
                                                 </fo:table-cell>
                                             </fo:table-row>
@@ -75,7 +81,8 @@
                                                 </fo:table-cell>
                                                 <fo:table-cell>
                                                     <fo:block>
-                                                        <xsl:value-of select="concat(substring(ad:start_time,1,5),' Uhr')"/>
+                                                        <xsl:value-of
+                                                                select="concat(substring(ad:start_time,1,5),' Uhr')"/>
                                                     </fo:block>
                                                 </fo:table-cell>
                                             </fo:table-row>
@@ -87,7 +94,8 @@
                                                 </fo:table-cell>
                                                 <fo:table-cell>
                                                     <fo:block>
-                                                        <xsl:value-of select="concat(substring(ad:end_time,1,5),' Uhr')"/>
+                                                        <xsl:value-of
+                                                                select="concat(substring(ad:end_time,1,5),' Uhr')"/>
                                                     </fo:block>
                                                 </fo:table-cell>
                                             </fo:table-row>
@@ -101,7 +109,8 @@
                                             border-width="0cm"
                                             content-height="scale-to-fit" content-width="6.6cm"
                                             scaling="uniform">
-                                        <xsl:attribute name="src"><xsl:value-of select="ad:picture"/>
+                                        <xsl:attribute name="src">
+                                            <xsl:value-of select="ad:picture"/>
                                         </xsl:attribute>
                                     </fo:external-graphic>
                                 </fo:block>
