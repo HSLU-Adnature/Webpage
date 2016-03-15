@@ -47,9 +47,9 @@
             <fo:block font-size="16pt">
                 <xsl:value-of select="ad:title"/>
             </fo:block>
-
+            &#160;
             <fo:block>
-                <fo:table space-after.optimum="5pt" width="20cm" font-size="11pt">
+                <fo:table space-after.optimum="10pt" width="20cm" font-size="11pt">
                     <fo:table-body>
                         <fo:table-row>
                             <fo:table-cell>
@@ -64,7 +64,7 @@
                                                 </fo:table-cell>
                                                 <fo:table-cell>
                                                     <fo:block>
-                                                        <xsl:value-of select="ad:date"/>
+                                                        <xsl:value-of select="concat(substring(ad:date,9,2),'.', substring(ad:date,6,2),'.',substring(ad:date,1,4))"/>
                                                     </fo:block>
                                                 </fo:table-cell>
                                             </fo:table-row>
@@ -76,7 +76,7 @@
                                                 </fo:table-cell>
                                                 <fo:table-cell>
                                                     <fo:block>
-                                                        <xsl:value-of select="ad:start_time"/>
+                                                        <xsl:value-of select="substring(ad:start_time,1,5)"/>
                                                     </fo:block>
                                                 </fo:table-cell>
                                             </fo:table-row>
@@ -88,7 +88,7 @@
                                                 </fo:table-cell>
                                                 <fo:table-cell>
                                                     <fo:block>
-                                                        <xsl:value-of select="ad:end_time"/>
+                                                        <xsl:value-of select="substring(ad:end_time,1,5)"/>
                                                     </fo:block>
                                                 </fo:table-cell>
                                             </fo:table-row>
