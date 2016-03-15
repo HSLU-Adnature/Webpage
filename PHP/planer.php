@@ -168,7 +168,7 @@ if (!isset($_COOKIE["planer"])) {
 }
 
 if (!isset($_COOKIE["thrown"])) {
-    setcookie("thrown", serialize($thrownData), time() + 3600);
+    setcookie("thrown", serialize($thrownData), time() + 180);
 } else {
     $thrownData = unserialize($_COOKIE['thrown']);
 }
