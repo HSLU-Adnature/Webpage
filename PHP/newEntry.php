@@ -62,5 +62,4 @@ if ($xml_file->schemaValidate("../xml/core.xsd")) {
                 window.history.back();
             }
             </script>";
-    //header("Refresh:10; url=../html/newEntry.html");
 }
