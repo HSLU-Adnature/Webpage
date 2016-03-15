@@ -16,6 +16,9 @@
             </fo:layout-master-set>
             <fo:page-sequence master-reference="event_print">
                 <fo:static-content flow-name="xsl-region-before">
+                    <fo:block text-align="right">
+                        <fo:external-graphic src="http://taxml.enterpriselab.ch/team04/pics/logo.png" border-width="0cm" content-height="scale-to-fit" content-width="3cm"  scaling="uniform"/>
+                    </fo:block>
                     <fo:block font-size="19pt" font-family="sans-serif" line-height="24pt" space-after.optimum="20pt"
                               background-color="green" color="white" text-align="center" padding-top="5pt"
                               padding-bottom="5pt">
@@ -30,7 +33,7 @@
                     </fo:block>
                 </fo:static-content>
                 <fo:flow flow-name="xsl-region-body">
-                    <fo:block margin-top="20pt">
+                    <fo:block margin-top="60pt">
                         <xsl:apply-templates/>
                     </fo:block>
                 </fo:flow>
@@ -43,6 +46,7 @@
             <fo:block font-size="16pt">
                 <xsl:value-of select="ad:title"/>
             </fo:block>
+
             <fo:block>
                 <fo:table space-after.optimum="5pt" width="5cm" font-size="11pt">
                     <fo:table-body>
