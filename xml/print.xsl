@@ -41,7 +41,6 @@
             </fo:page-sequence>
         </fo:root>
     </xsl:template>
-
     <xsl:template match="ad:adnature_events/ad:event">
         <fo:block text-align="left" font-size="8pt" margin-top="20pt">
             <fo:block font-size="16pt">
@@ -76,7 +75,7 @@
                                                 </fo:table-cell>
                                                 <fo:table-cell>
                                                     <fo:block>
-                                                        <xsl:value-of select="substring(ad:start_time,1,5)"/>
+                                                        <xsl:value-of select="concat(substring(ad:start_time,1,5),' Uhr')"/>
                                                     </fo:block>
                                                 </fo:table-cell>
                                             </fo:table-row>
@@ -88,7 +87,7 @@
                                                 </fo:table-cell>
                                                 <fo:table-cell>
                                                     <fo:block>
-                                                        <xsl:value-of select="substring(ad:end_time,1,5)"/>
+                                                        <xsl:value-of select="concat(substring(ad:end_time,1,5),' Uhr')"/>
                                                     </fo:block>
                                                 </fo:table-cell>
                                             </fo:table-row>
@@ -100,7 +99,7 @@
                                 <fo:block>
                                     <fo:external-graphic
                                             border-width="0cm"
-                                            content-height="scale-to-fit" content-width="7cm"
+                                            content-height="scale-to-fit" content-width="6.6cm"
                                             scaling="uniform">
                                         <xsl:attribute name="src"><xsl:value-of select="ad:picture"/>
                                         </xsl:attribute>
